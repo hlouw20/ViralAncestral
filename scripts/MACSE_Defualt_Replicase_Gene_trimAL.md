@@ -1,12 +1,14 @@
-## Code for aligning Replicase gene through MACSE with default params
-Directory: `cd/Users/haileylouw/Desktop/ViralAncestral/ReplicaseGene`
+## Code for aligning Replicase gene Nucleotides through MACSE with default params
+Directory: `cd ./ViralAncestral/data`
 
-- IRES type 1: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ires1_for_repNT.fasta`
-- IRES type 2: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ires2_for_repNT.fasta`
-- IRES type 3: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ires3_for_repNT.fasta`
+- IRES type 1: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ./Replicase_Gene/IRES_Subtypes/Replicase_ires1_NT.fasta`
+
+- IRES type 2: `java -jar ./macse_v2.07.jar -prog alignSequences -seq Replicase_ires2_NT.fasta.fasta`
+
+- IRES type 3: `java -jar ./macse_v2.07.jar -prog alignSequences -seq Replicase_ires3_NT.fasta.fasta`
 
 ## Code for using trimAl for aligned Replicase gene with gap threshold = 1 (the minimum fraction of sequences without a gap that you require to consider a column of “enough quality”)
-Directory: `cd/Users/haileylouw/Desktop/ViralAncestral/ReplicaseGene/trimAL/source`
+Directory: `cd /Users/haileylouw/Desktop/ViralAncestral/ReplicaseGene/trimAL/source`
 
 - IRES type 1 NT: `./trimal -in ires1_for_repNT_NT.fasta -out trimmedIres1NT.fasta -htmlout trimmedIres1NT.html -gt 1`
 
