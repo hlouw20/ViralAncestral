@@ -1,0 +1,153 @@
+IQ-TREE 2.2.2.6 COVID-edition built May 27 2023
+
+Input file name: /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_Files/5UTR_MUSCLE_ires3_NT_hmm.fasta
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 297591
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 7 sequences with 930 nucleotide sites
+Number of constant sites: 535 (= 57.5269% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 535 (= 57.5269% of all sites)
+Number of parsimony informative sites: 178
+Number of distinct site patterns: 424
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+G4
+
+Rate parameter R:
+
+  A-C: 0.7314
+  A-G: 1.8485
+  A-T: 1.2342
+  C-G: 0.7265
+  C-T: 2.5769
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2275
+  pi(C) = 0.2219
+  pi(G) = 0.2491
+  pi(T) = 0.3015
+
+Rate matrix Q:
+
+  A   -0.9677    0.1579    0.4478     0.362
+  C    0.1619    -1.094     0.176    0.7558
+  G    0.4092    0.1568   -0.8593    0.2933
+  T    0.2732    0.5562    0.2423    -1.072
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.2528
+Gamma shape alpha: 2.624
+
+ Category  Relative_rate  Proportion
+  0         0              0.2528
+  1         0.4791         0.1868
+  2         0.948          0.1868
+  3         1.445          0.1868
+  4         2.481          0.1868
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -3500.5460 (s.e. 104.1310)
+Unconstrained log-likelihood (without tree): -4269.0204
+Number of free parameters (#branches + #model parameters): 21
+Akaike information criterion (AIC) score: 7043.0919
+Corrected Akaike information criterion (AICc) score: 7044.1096
+Bayesian information criterion (BIC) score: 7144.6308
+
+Total tree length (sum of branch lengths): 2.1856
+Sum of internal branch lengths: 0.3241 (14.8288% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NC_028364.1' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++----------------------------------------------NC_028364.1
+|
+|                    +-------------------------------NC_028981.1
+|       +------------| (88)
+|       |            +---------------------NC_028366.1
+|    +--| (39)
+|    |  |             +----------------------------------NC_028363.1
+|    |  +-------------| (96)
+|    |                +-------------------------------NC_001489.1
++----| (36)
+|    +---------------NC_027818.1
+|
++-------------------------NC_028365.1
+
+Tree in newick format:
+
+(NC_028364.1:0.4091724248,(((NC_028981.1:0.2785116219,NC_028366.1:0.1992360626)88:0.1150357104,(NC_028363.1:0.3117673714,NC_001489.1:0.2843665544)96:0.1298947054)39:0.0273486817,NC_027818.1:0.1468438020)36:0.0518114106,NC_028365.1:0.2315666032);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -3501.167833
+Robinson-Foulds distance between ML tree and consensus tree: 4
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------------------------------------------------------NC_028364.1
+|
+|                   +------------------------------------NC_028981.1
+|     +-------------| (88)
+|     |             +--------------------------NC_028366.1
+|  +--| (39)
+|  |  +----------------------------------NC_028365.1
++--| (39)
+|  +--------------------NC_027818.1
+|
+|               +----------------------------------------NC_028363.1
++---------------| (96)
+                +-------------------------------------NC_001489.1
+
+
+Consensus tree in newick format: 
+
+(NC_028364.1:0.4410421845,(((NC_028981.1:0.2765225805,NC_028366.1:0.2031060438)88:0.1096224928,NC_028365.1:0.2619739402)39:0.0186199461,NC_027818.1:0.1588719612)39:0.0270212527,(NC_028363.1:0.3055570874,NC_001489.1:0.2851351558)96:0.1207966367);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_Files/5UTR_MUSCLE_ires3_NT_hmm.fasta.treefile -m "GTR{0.731359,1.84846,1.23421,0.726506,2.57689}+F{0.227544,0.221896,0.249059,0.301502}+I{0.252828}+G4{2.62431}" --length 930
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_Files/5UTR_MUSCLE_ires3_NT_hmm.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_Files/5UTR_MUSCLE_ires3_NT_hmm.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Tue Jul 25 17:12:21 2023
+Total CPU time used: 1.134468 seconds (0h:0m:1s)
+Total wall-clock time used: 0.9611179829 seconds (0h:0m:0s)
+
