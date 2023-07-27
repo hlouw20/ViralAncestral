@@ -1,0 +1,11 @@
+install.packages("Biostrings")
+install.packages("phylotools")
+install.packages("tidyverse")
+library(Biostrings)
+library(phylotools)
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+RepIres1Musc <- read.fasta("/Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_AA.fasta")
+RepIres1Musc <- RepIres1Musc %>% separate(seq.name, c('a, b, c, d, e, f'))
