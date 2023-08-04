@@ -18,14 +18,23 @@ IRES Type 2:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replic
 
 IRES Type 3:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_Default_ires3_AA.fasta -m TEST+I+G+F`
 
-## MUSCLE Replicase Gene Nucleotides 
+## MUSCLE Replicase Gene Nucleotides under GTR+I+G 
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
-IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta -m MFP -m GTR+I+G  -b 100`
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta -m GTR+I+G  -b 100`
 
-IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m MFP -m GTR+I+G  -b 100`
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m GTR+I+G  -b 100`
 
-IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_NT.fasta -m MFP -m GTR+I+G`
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_NT.fasta -m GTR+I+G`
+
+## MUSCLE Replicase Gene Nucleotides under Extended ModelFinder 
+Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
+
+IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta -m MFP -b 100`
+
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m MFP  -b 100`
+
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_NT.fasta -m MFP`
 
 ## MUSCLE Replicase Gene Amino Acids
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
