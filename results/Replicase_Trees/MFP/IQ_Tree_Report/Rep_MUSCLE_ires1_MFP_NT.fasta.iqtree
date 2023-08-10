@@ -1,0 +1,244 @@
+IQ-TREE 2.2.2.6 COVID-edition built May 27 2023
+
+Input file name: /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta
+Type of analysis: ModelFinder + tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 824373
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 16 sequences with 1489 nucleotide sites
+Number of constant sites: 479 (= 32.1692% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 479 (= 32.1692% of all sites)
+Number of parsimony informative sites: 874
+Number of distinct site patterns: 982
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: GTR+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+GTR+F+I+G4       -17931.370   35940.740 -   0.0465   35942.894 +   0.0581   36147.669 +    0.997
+GTR+F+I+R3       -17926.161   35936.322 +    0.424   35938.820 +    0.445   36159.168 -  0.00317
+GTR+F+R4         -17926.288   35938.577 +    0.137   35941.196 +    0.136   36166.729 - 7.24e-05
+GTR+F+I+R4       -17924.393   35936.787 +    0.336   35939.529 +    0.312   36170.244 - 1.25e-05
+GTR+F+G4         -17948.276   35972.552 - 5.75e-09   35974.597 - 7.58e-09   36174.175 - 1.75e-06
+GTR+F+R5         -17925.183   35940.366 +   0.0561   35943.235 -   0.0489   36179.130 - 1.47e-07
+GTR+F+R3         -17944.501   35971.002 - 1.25e-08   35973.382 - 1.39e-08   36188.542 - 1.33e-09
+TIM2+F+I+G4      -17962.362   35998.725 - 1.19e-14   36000.663 - 1.66e-14   36195.041 - 5.15e-11
+TIM3+F+I+G4      -17964.226   36002.453 - 1.85e-15   36004.391 - 2.57e-15   36198.770 - 7.98e-12
+GTR+F+I+R2       -17966.023   36012.046 - 1.53e-17   36014.311 -  1.8e-17   36224.280 -  2.3e-17
+TVM+F+I+G4       -17976.747   36029.493 - 2.49e-21   36031.538 - 3.27e-21   36231.116 - 7.56e-19
+TN+F+I+G4        -17993.181   36058.361 - 1.34e-27   36060.196 - 1.96e-27   36249.372 -  8.2e-23
+TIM+F+I+G4       -17992.572   36059.143 - 9.06e-28   36061.081 - 1.26e-27   36255.460 - 3.91e-24
+SYM+I+G4         -17997.817   36067.634 -  1.3e-29   36069.468 -  1.9e-29   36258.644 - 7.95e-25
+TIM2e+I+G4       -18005.831   36079.662 - 3.17e-32   36081.299 - 5.12e-32   36260.061 - 3.92e-25
+TPM2u+F+I+G4     -18003.443   36078.887 - 4.67e-32   36080.721 - 6.84e-32   36269.898 - 2.86e-27
+TPM3u+F+I+G4     -18005.700   36083.401 - 4.89e-33   36085.235 - 7.16e-33   36274.411 -    3e-28
+TVMe+I+G4        -18022.033   36114.067 - 1.07e-39   36115.801 - 1.65e-39   36299.772 - 9.33e-34
+TPM2+I+G4        -18029.660   36125.321 - 3.86e-42   36126.863 - 6.54e-42   36300.414 - 6.77e-34
+HKY+F+I+G4       -18030.293   36130.585 - 2.78e-43   36132.319 - 4.27e-43   36316.290 - 2.42e-37
+K3Pu+F+I+G4      -18029.917   36131.835 - 1.49e-43   36133.669 - 2.17e-43   36322.846 - 9.11e-39
+TIM3e+I+G4       -18072.669   36213.339 - 2.98e-61   36214.976 - 4.81e-61   36393.738 - 3.68e-54
+TNe+I+G4         -18077.549   36221.097 - 6.15e-63   36222.639 - 1.04e-62   36396.190 - 1.08e-54
+TIMe+I+G4        -18075.967   36219.935 -  1.1e-62   36221.572 - 1.78e-62   36400.334 - 1.36e-55
+TPM3+I+G4        -18097.884   36261.767 - 9.07e-72   36263.309 - 1.54e-71   36436.861 - 1.59e-63
+K2P+I+G4         -18102.194   36268.387 - 3.31e-73   36269.838 - 5.87e-73   36438.175 - 8.24e-64
+K3P+I+G4         -18100.574   36267.147 - 6.16e-73   36268.690 - 1.04e-72   36442.241 - 1.08e-64
+GTR+F+R2         -18093.979   36265.958 - 1.12e-72   36268.111 - 1.39e-72   36472.887 - 2.39e-71
+GTR+F+I          -18332.634   36741.269 - 6.84e-176   36743.313 - 9.02e-176   36942.892 - 2.08e-173
+F81+F+I+G4       -18389.721   36847.441 - 6.03e-199   36849.078 - 9.74e-199   37027.840 - 7.44e-192
+JC+I+G4          -18438.975   36939.949 - 4.92e-219   36941.311 - 9.13e-219   37104.431 - 1.74e-208
+GTR+F            -19373.212   38820.425 -        0   38822.363 -        0   39016.742 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+G4
+
+Rate parameter R:
+
+  A-C: 6.2524
+  A-G: 8.5606
+  A-T: 3.2934
+  C-G: 3.9102
+  C-T: 18.9605
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3042
+  pi(C) = 0.2035
+  pi(G) = 0.2253
+  pi(T) = 0.2671
+
+Rate matrix Q:
+
+  A   -0.8125    0.2534    0.3841    0.1751
+  C    0.3787    -1.562    0.1754     1.008
+  G    0.5185    0.1584   -0.7301   0.05318
+  T    0.1995    0.7683   0.04486    -1.013
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.2042
+Gamma shape alpha: 0.8687
+
+ Category  Relative_rate  Proportion
+  0         0              0.2042
+  1         0.1383         0.199
+  2         0.5446         0.199
+  3         1.224          0.199
+  4         3.119          0.199
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -17931.2195 (s.e. 308.3997)
+Unconstrained log-likelihood (without tree): -8828.7519
+Number of free parameters (#branches + #model parameters): 39
+Akaike information criterion (AIC) score: 35940.4390
+Corrected Akaike information criterion (AICc) score: 35942.5922
+Bayesian information criterion (BIC) score: 36147.3676
+
+Total tree length (sum of branch lengths): 8.4314
+Sum of internal branch lengths: 1.9500 (23.1282% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NC_001617_' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++--------------------------------------NC_001617_
+|
++----------------------------------NC_009996_
+|
+|         +--------------------------------NC_029905_
+|      +--| (27)
+|      |  +-------------------------------NC_001490_
++------| (47)
+       |                                             +--NC_001612_
+       |                +----------------------------| (100)
+       |                |                            +----NC_030454_
+       |            +---| (74)
+       |            |   +------------NC_002058_
+       |         +--| (41)
+       |         |  |  +---------------------NC_001430_
+       |         |  +--| (32)
+       |         |     |  +---------------NC_001472_
+       |         |     +--| (52)
+       |         |        |   +-----------NC_013695_
+       |         |        +---| (78)
+       |         |            +----------NC_010415_
+       |      +--| (42)
+       |      |  +----------------------------------NC_003988_
+       +------| (79)
+              |       +--------------------NC_034267_
+              +-------| (100)
+                      |       +-------------NC_001859_
+                      +-------| (100)
+                              |       +-------NC_008714_
+                              +-------| (99)
+                                      +-----NC_021220_
+
+Tree in newick format:
+
+(NC_001617_:0.8238357169,NC_009996_:0.7296494403,((NC_029905_:0.6968302563,NC_001490_:0.6687301445)27:0.0591445341,(((((NC_001612_:0.0705148811,NC_030454_:0.1169415666)100:0.6241181939,NC_002058_:0.2812646335)74:0.1037260191,(NC_001430_:0.4605647716,(NC_001472_:0.3509697160,(NC_013695_:0.2529113131,NC_010415_:0.2491335861)78:0.0976887343)52:0.0769168790)32:0.0410878849)41:0.0572438956,NC_003988_:0.7456234712)42:0.0400203557,(NC_034267_:0.4391284529,(NC_001859_:0.2957844875,(NC_008714_:0.1709443720,NC_021220_:0.1285756856)99:0.1864611557)100:0.1869300206)100:0.1693049771)79:0.1500741437)47:0.1573211709);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -17931.852820
+Robinson-Foulds distance between ML tree and consensus tree: 4
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------------------------------------NC_001617_
+|
+|     +---------------------------------------NC_009996_
++-----| (51)
+|     +------------------------------NC_001490_
+|
+|  +--------------------------------------NC_029905_
++--| (55)
+   |                                                  +--NC_001612_
+   |                 +--------------------------------| (100)
+   |                 |                                +-----NC_030454_
+   |            +----| (74)
+   |            |    +--------------NC_002058_
+   |         +--| (41)
+   |         |  |  +-----------------------NC_001430_
+   |         |  +--| (32)
+   |         |     |   +-----------------NC_001472_
+   |         |     +---| (52)
+   |         |         |    +------------NC_013695_
+   |         |         +----| (78)
+   |         |              +------------NC_010415_
+   |      +--| (42)
+   |      |  +--------------------------------------NC_003988_
+   +------| (79)
+          |       +----------------------NC_034267_
+          +-------| (100)
+                  |        +--------------NC_001859_
+                  +--------| (100)
+                           |         +--------NC_008714_
+                           +---------| (99)
+                                     +-----NC_021220_
+
+
+Consensus tree in newick format: 
+
+(NC_001617_:0.9459476845,(NC_009996_:0.7606665766,NC_001490_:0.5951162697)51:0.1299559861,(NC_029905_:0.7415286918,(((((NC_001612_:0.0713077485,NC_030454_:0.1163147747)100:0.6235586763,NC_002058_:0.2813569437)74:0.1040387812,(NC_001430_:0.4600868883,(NC_001472_:0.3511102900,(NC_013695_:0.2532857507,NC_010415_:0.2487665568)78:0.0977810623)52:0.0767720929)32:0.0406258126)41:0.0577191220,NC_003988_:0.7454517712)42:0.0417389620,(NC_034267_:0.4405858447,(NC_001859_:0.2963598321,(NC_008714_:0.1704878313,NC_021220_:0.1292283412)99:0.1868452914)100:0.1862223058)100:0.1671313305)79:0.1418292655)55:0.0356622678);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta.treefile -m "GTR{6.2524,8.5606,3.29338,3.91022,18.9605}+F{0.304164,0.203487,0.225297,0.267051}+I{0.204178}+G4{0.868687}" --length 1489
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Aug  9 12:22:41 2023
+Total CPU time used: 7.58529 seconds (0h:0m:7s)
+Total wall-clock time used: 7.480665922 seconds (0h:0m:7s)
+
