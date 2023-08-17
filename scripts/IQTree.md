@@ -36,6 +36,24 @@ IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replica
 
 IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_NT.fasta -m MFP`
 
+## MUSCLE Replicase Gene Amino Acids under LG+G+I+G4
+Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
+
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_AA.fasta -m LG+I+G+F -b 100`
+
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta -m LG+I+G+F -b 100`
+
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_AA.fasta -m LG+I+G+F`
+
+## MUSCLE Replicase Gene Amino Acids under FLAVI+G+I+G4
+Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
+
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_AA.fasta -m FLAVI+I+G+F -b 100`
+
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta -m FLAVI+I+G+F -b 100`
+
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_AA.fasta -m FLAVI+I+G+F`
+
 ## MUSCLE Replicase Gene Amino Acids under Extended Model Finder
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
@@ -62,6 +80,24 @@ IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimme
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires2_NT_hmm.fasta -m MFP -b 100`
 
 IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires3_NT_hmm.fasta -m MFP`
+
+## MUSCLE + HmmCleaner Replicase Gene Amino Acids under LG+F+I+G4
+Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
+
+IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires1_AA_hmm.fasta -m LG+I+G+F -b 100`
+
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires2_AA_hmm.fasta -m LG+I+G+F -b 100`
+
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires3_AA_hmm.fasta -m LG+I+G+F`
+
+## MUSCLE + HmmCleaner Replicase Gene Amino Acids under FLAVI+F+I+G4
+Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
+
+IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires1_AA_hmm.fasta -m FLAVI+I+G+F -b 100`
+
+IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires2_AA_hmm.fasta -m FLAVI+I+G+F -b 100`
+
+IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_Files/Rep_MUSCLE_ires3_AA_hmm.fasta -m FLAVI+I+G+F`
 
 ## MUSCLE + HmmCleaner Replicase Gene Amino Acids under Extended Model Finder
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
