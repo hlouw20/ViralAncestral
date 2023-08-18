@@ -1,0 +1,197 @@
+IQ-TREE 2.2.2.6 COVID-edition built May 27 2023
+
+Input file name: /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 29325
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 18 sequences with 512 amino-acid sites
+Number of constant sites: 63 (= 12.3047% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 63 (= 12.3047% of all sites)
+Number of parsimony informative sites: 411
+Number of distinct site patterns: 484
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: FLAVI+F+I+G4
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0662
+  pi(R) = 0.0499
+  pi(N) = 0.0384
+  pi(D) = 0.0657
+  pi(C) = 0.0167
+  pi(Q) = 0.0271
+  pi(E) = 0.0582
+  pi(G) = 0.0601
+  pi(H) = 0.0278
+  pi(I) = 0.0535
+  pi(L) = 0.0924
+  pi(K) = 0.0607
+  pi(M) = 0.0227
+  pi(F) = 0.0581
+  pi(P) = 0.0585
+  pi(S) = 0.0636
+  pi(T) = 0.0587
+  pi(W) = 0.0133
+  pi(Y) = 0.0415
+  pi(V) = 0.0669
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.0697
+Gamma shape alpha: 1.1207
+
+ Category  Relative_rate  Proportion
+  0         0              0.0697
+  1         0.1724         0.2326
+  2         0.5485         0.2326
+  3         1.0937         0.2326
+  4         2.4853         0.2326
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -14353.2240 (s.e. 316.7623)
+Unconstrained log-likelihood (without tree): -3143.7666
+Number of free parameters (#branches + #model parameters): 54
+Akaike information criterion (AIC) score: 28814.4480
+Corrected Akaike information criterion (AICc) score: 28827.4458
+Bayesian information criterion (BIC) score: 29043.3175
+
+Total tree length (sum of branch lengths): 22.4925
+Sum of internal branch lengths: 10.4043 (46.2569% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'rf_1_NC_003976_' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++-----------rf_1_NC_003976_
+|
+|         +--------rf_1_NC_024767_
++---------| (99)
+|         +-----rf_1_NC_024766_
+|
+|                       +--------rf_1_NC_018668_
++-----------------------| (100)
+                        |  +-------rf_1_NC_003983_
+                        +--| (55)
+                           |      +---------rf_1_NC_010354_
+                           |   +--| (21)
+                           |   |  |  +--rf_1_NC_001479_
+                           |   |  +--| (100)
+                           |   |     |  +--rf_1_NC_001366_
+                           |   |     +--| (100)
+                           |   |        |  +--rf_1_NC_010810_
+                           |   |        +--| (100)
+                           |   |           +--rf_1_NC_009448_
+                           +---| (56)
+                               |          +--rf_1_NC_012802_
+                               |       +--| (86)
+                               |       |  +--rf_1_NC_012798_
+                               |  +----| (98)
+                               |  |    |  +--rf_1_NC_012801_
+                               |  |    +--| (44)
+                               |  |       +--rf_1_NC_012800_
+                               +--| (29)
+                                  |         +--------------rf_1_NC_021178_
+                                  +---------| (98)
+                                            |     +----rf_1_NC_024770_
+                                            +-----| (100)
+                                                  |  +--rf_1_NC_028380_
+                                                  +--| (100)
+                                                     +--rf_1_NC_023861_
+
+Tree in newick format:
+
+(rf_1_NC_003976_:1.6122942268,(rf_1_NC_024767_:1.2876588141,rf_1_NC_024766_:0.8800694080)99:1.3383053352,(rf_1_NC_018668_:1.2719800126,(rf_1_NC_003983_:1.1072711460,((rf_1_NC_010354_:1.3912116521,(rf_1_NC_001479_:0.4057382485,(rf_1_NC_001366_:0.1591782532,(rf_1_NC_010810_:0.0042569753,rf_1_NC_009448_:0.0112093987)100:0.2680297127)100:0.2933930333)100:0.4256961757)21:0.0772378871,(((rf_1_NC_012802_:0.1666774429,rf_1_NC_012798_:0.2436318036)86:0.1302267928,(rf_1_NC_012801_:0.3239018108,rf_1_NC_012800_:0.2852689643)44:0.0925788568)98:0.6698383871,(rf_1_NC_021178_:2.0716524999,(rf_1_NC_024770_:0.7461069228,(rf_1_NC_028380_:0.0777862923,rf_1_NC_023861_:0.0422458186)100:0.5019297393)100:0.7954767934)98:1.3601295490)29:0.2208675953)56:0.6213644936)55:0.4204875612)100:3.1887610750);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -14354.964312
+Robinson-Foulds distance between ML tree and consensus tree: 4
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------rf_1_NC_003976_
+|
+|         +---------rf_1_NC_024767_
++---------| (99)
+|         +-----rf_1_NC_024766_
+|
+|                       +---------rf_1_NC_018668_
++-----------------------| (100)
+                        |  +-------rf_1_NC_003983_
+                        +--| (55)
+                           |         +---------rf_1_NC_010354_
+                           |      +--| (38)
+                           |      |  |       +--rf_1_NC_012802_
+                           |      |  |    +--| (86)
+                           |      |  |    |  +--rf_1_NC_012798_
+                           |      |  +----| (98)
+                           |      |       |  +--rf_1_NC_012801_
+                           |      |       +--| (44)
+                           |      |          +--rf_1_NC_012800_
+                           |   +--| (33)
+                           |   |  |  +--rf_1_NC_001479_
+                           |   |  +--| (100)
+                           |   |     |  +--rf_1_NC_001366_
+                           |   |     +--| (100)
+                           |   |        |  +--rf_1_NC_010810_
+                           |   |        +--| (100)
+                           |   |           +--rf_1_NC_009448_
+                           +---| (56)
+                               |          +---------------rf_1_NC_021178_
+                               +----------| (98)
+                                          |    +----rf_1_NC_024770_
+                                          +----| (100)
+                                               |  +--rf_1_NC_028380_
+                                               +--| (100)
+                                                  +--rf_1_NC_023861_
+
+
+Consensus tree in newick format: 
+
+(rf_1_NC_003976_:1.5907023059,(rf_1_NC_024767_:1.2913674114,rf_1_NC_024766_:0.8756309340)99:1.3236583905,(rf_1_NC_018668_:1.2771504684,(rf_1_NC_003983_:1.1017371886,(((rf_1_NC_010354_:1.3394762225,((rf_1_NC_012802_:0.1639803394,rf_1_NC_012798_:0.2465398402)86:0.1349017362,(rf_1_NC_012801_:0.3212789256,rf_1_NC_012800_:0.2856017026)44:0.0885099946)98:0.7580018083)38:0.1575890467,(rf_1_NC_001479_:0.4068595310,(rf_1_NC_001366_:0.1616968133,(rf_1_NC_010810_:0.0042899161,rf_1_NC_009448_:0.0111565962)100:0.2653916323)100:0.2924991878)100:0.4647387776)33:0.1329061854,(rf_1_NC_021178_:2.1254325742,(rf_1_NC_024770_:0.7394633792,(rf_1_NC_028380_:0.0787802340,rf_1_NC_023861_:0.0414368189)100:0.5102673206)100:0.7526517804)98:1.4268071686)56:0.5245368367)55:0.4220215298)100:3.1569648823);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta.treefile -m "FLAVI+F+I{0.0697487}+G4{1.12067}" --length 512
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Fri Aug 18 10:28:50 2023
+Total CPU time used: 50.389224 seconds (0h:0m:50s)
+Total wall-clock time used: 51.44876504 seconds (0h:0m:51s)
+
