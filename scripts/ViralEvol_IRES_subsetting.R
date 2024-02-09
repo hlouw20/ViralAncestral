@@ -79,7 +79,7 @@ df5 <- df5[,c(1:2)]
 
 # Make new df to create fasta file outputs
 newdf <- read.fasta("./5UTR_Region/picornaviridae2_5UTR_with_outgroup.fasta")
-
+c
 # fasta files for IRES type from 5'UTR region
 # location of sequences the same between Replicase Gene and 5'UTR Region - so will use for replicase gene too with respect to filtering 
 ires_0 <- newdf %>% filter(seq_name %in% df0$seq_name)

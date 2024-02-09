@@ -2,7 +2,8 @@
 Infer a phylogenetic tree from viral sequences, and use the tree to estimate the ancestral protein sequence of this group.
 
 ## To do 
-- 5'UTR MUSCLE for IRES 2, 3 MFP Tree
+- Find Successful Data for ASR (ask Helena)
+- Watch tuturial on how to use GenBank
 - Read paper on LG Substitution Matrix (preferred by IQ-Tree for the AA sequences that had larger datasets)
 - Use IQ-Tree for ASR
   1. Replicase Tree with 5'UTR NT (IRES 1, 2, 3)
