@@ -3,9 +3,9 @@ Directory: `cd ./Desktop/ViralAncestral/data`
 
 - IRES type 1: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ./Replicase_Gene/IRES_Subtypes/Replicase_ires1_NT.fasta -out_NT /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires1_NT.fasta -out_AA /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires1_AA.fasta`
 
-- IRES type 2: `java -jar ./macse_v2.07.jar -prog alignSequences -seq Replicase_ires2_NT.fasta -out_NT /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires2_NT.fasta -out_AA /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires2_AA.fasta`
+- IRES type 2: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ./Replicase_Gene/IRES_Subtypes/Replicase_ires2_NT.fasta -out_NT /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires2_NT.fasta -out_AA /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires2_AA.fasta`
 
-- IRES type 3: `java -jar ./macse_v2.07.jar -prog alignSequences -seq Replicase_ires3_NT.fasta -out_NT /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires3_NT.fasta -out_AA /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires3_AA.fasta`
+- IRES type 3: `java -jar ./macse_v2.07.jar -prog alignSequences -seq ./Replicase_Gene/IRES_Subtypes/Replicase_ires3_NT.fasta -out_NT /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires3_NT.fasta -out_AA /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MACSE_Default/Rep_MACSE_default_ires3_AA.fasta`
 
 ## Code for using trimAl for aligned Replicase gene with gap threshold = 1 (the minimum fraction of sequences without a gap that you require to consider a column of “enough quality”)
 Directory: `cd /Users/haileylouw/Desktop/ViralAncestral/data`

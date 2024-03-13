@@ -3,8 +3,8 @@
   - AA: 'picornaviridae2_5UTR_with_outgroup_AA.fasta'
   - NT: 'picornaviridae2_5UTR_with_outgroup_NT.fasta'
 - Replicase Gene
-  - AA: 'PRAA.fasta'
-  - NT: 'PRNT.fasta'
+  - AA: 'picornaviridae_replicase_aminoacid_with_outgroup.fasta'
+  - NT: 'picornaviridae_replicase_nucleotide_with_outgroup.fasta'
 
 ## IRES Subtypes Before Alignment: 
 - 5'UTR (only NT):

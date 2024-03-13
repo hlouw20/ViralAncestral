@@ -1,0 +1,146 @@
+---
+title: "Viral Ancestral Project Steps"
+author: "Hailey Bruzzone"
+date: "Current as of March 12, 2024"
+output: html_document
+---
+
+# Biggest
+## Bigger
+### Big
+
+Normal
+
+`code`
+
+# Description of Project Steps for Viral-Ancestral Project out of Solis-Lemus Lab in Collaboration with UW Plant Pathology 
+
+## 1. Original Data 
+
+Data was distributed in shared Google Drive by Helena Jaramillo-Mesa with Claudia Solís-Lemus and Hailey Bruzzone.  It consists of the 4 datasets: 
+
+1. `picornaviridae_replicase_aminoacid_with_outgroup.fasta`; 86 AA sequences of the Replicase Gene with max length of 809 
+
+2. `picornaviridae_replicase_nucleotide_with_outgroup.fasta`; 86 NT sequences of the Replicase Gene with max length of 2,430
+
+3.  `picornaviridae_5UTR_with_outgroup.fasta`; 131 NT sequences of the 5'UTR region with max length of 1,410
+
+4. `IRES_list.txt`; 131 identified sequence names regarding IRES type
+
+  - IRES Type 0 indicates the sequence's IRES type was unable to be identified 
+  - IRES Types 1-5 are considered legitimate segmentations of the ribosomal entry site 
+  - Note on identification of IRES types:
+    - Various sources were used 
+    - IRES types are considered to be "predicted" and have not been experimentally verified 
+    - IRESes can be variable even within IRESes of the same type
+    - These labels should be considered a starting point / guide
+    
+## 2. Subsetting IRES Types
+
+We next subset the 3 original FASTA files by the 6 respective IRES lables (types 1-5 and unidentified).
+
+These steps for this process are in the file `~/scripts/ViralEvol_IRES_subsetting.R`
+
+The files for the 5'UTR Region (NT) and Replicase Gene (NT and AA) can be found in the respective directories: 
+
+`~/data/5UTR_Region/IRES_Subtypes`
+
+`~/data/Replicase_Gene/IRES_Subtypes`
+
+## 3. Aligning the Sequences
+
+Previous work had used the software MAFFT to align the sequences, with default parameters.  Here, we consider two different softwares: MACSE and MUSCLE.  Note that though we had 5 feasible IRES types to work with, after speaking with biologist collaborators we noted that IRES types 1, 2, and 3, were the most well-studied types and were likely the most easy to be verified in downstream analyses.  Because of this, we decide to move forward focusing on IRES types 1, 2, and 3 for alignment, trimming, tree construction, and ASR.  However, each of the steps we take could just as easily be conducted on IRES types 4 and 5 using the appropriate files as mentioned earlier.  
+
+We started with MACSE based on some preliminary readings and suggestions Claudia had based on experience and input from collaborators.  The scripts for aligning with MACSE can be found in the files `~/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  Note that the input file for alignment is the NT file, but MACSE automatically generates both NT and AA alignments for the given sequences.  The files can be found in `~/data/5UTR_Region/Aligned_Sequences/MACSE_Default` and `~/data/Replicase_Gene/Aligned_Sequences/MACSE_Default`, respectively.  Because a main priority in this project is breaking down the data as much as possible to reveal any underlying patterns / processes, we decide to conduct each step on each IRES type respectively.  That is, we align all IRES 1 sequences, IRES 2 sequences, and IRES 3 sequences separately and conduct downstream analyses as is appropriate.   
+
+Over the course of the summer we read about an improved alignment strategy, MUSCLE, that had shown more accurate results in downstream analyses.  We then decided to once again align the sequences using MUSCLE this time.  The scripts for aligning with MUSCLE can be found in `~/scripts/MUSCLE_5UTR.md` and `~/scripts/MUSCLE_Replicase_Gene.md`, respectively.  The aligned sequences can be found in  `~/data/5UTR_Region/Aligned_Sequences/MUSCLE` and `~/data/Replicase_Gene/Aligned_Sequences/MUSCLE`, respectively.  
+
+Note that the alignment algorithms are set to remove sequences that contribute little to no information to the MSA (i.e., the vast majority of positions in the alignment are gaps).  This renders out datasets to be very small, and it's unclear whether these small alignments are able to give us proper signal in downstream evolutionary analyses. 
+
+## 3. Trimming the Sequences
+
+After alignment, we trim the sequences to reduce the amount of noise in the alignment.  Initially, we use the software trimAl to trim the sequences aligned with MACSE.  After reading and talking to collaborators about other trimming methods, we decide to use HmmCleaner to trim the sequences aligned with MUSCLE.  Note that while we were able to use the trimAl software with relative ease (on Hailey's personal Macbook with the M1 chip), HmmCleaner was more complicated to use.  At the moment, HmmCleaner is incompatible with the 
+Apple M-chips.  Thus, the trimming procedure had to be conducted on a university Windows laptop while running on a Linux terminal shell.  This should be noted for replication / future studies.
+
+The scripts for trimAl can be found in `~/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  The corresponding data can be found in `./data/Trimmed_Sequences/trimAl/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences/trimAl/Replicase_Gene/FASTA_files`. 
+
+While HmmCleaner was run on a different machine than the rest of the project, the scripts for what can be run on the appropriate machine can be found in `~/scripts/HmmCleaner.md`. The corresponding data can be found in `./data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_files`.  
+
+## 4. Building the Trees
+
+We next build a plethora of trees using IQ-Tree.  After a mixture of convention and research, we build the following trees under different substitution models: 
+
+5'UTR (NT only):
+1. MACSE alignment under GTR+F+I+G4 Model (3)
+2. MUSCLE aligment under GTR+F+I+G4 Model (3)
+3. MUSCLE alignment under Extended Model Finder (3)
+  - IRES 1: SYM+G4
+  - IRES 2: TPM3u+F+R4
+  - IRES 3: TN+F+G4
+4. MUSCLE + HmmCleaner alignment under GTR+F+I+G4 (3)
+5. MUSCLE + HmmCleaner alignment under Extended Model Finder (3)
+  - IRES 1: SYM+G4
+  - IRES 2: TIM3e+I+G4
+  - IRES 3: HKY+F+G4
+  
+Replicase Gene (NT & AA): 
+1. MACSE NT alignment under GTR+F+I+G4 Model (3)
+2. MACSE AA alignment under Extended Model Finder (3)
+  - IRES 1: LG+I+G4
+  - IRES 2: LG+I+G4
+  - IRES 3: Blosum62+I
+3. MUSCLE NT alignment under GTR+F+I+G4 Model (3)
+4. MUSCLE NT alignment under Extended Model Finder (3)
+  - IRES 1: GTR+F+I+G4
+  - IRES 2: GTR+F+I+G4
+  - IRES 3: TPM2u+F+I
+5. MUSCLE AA alignment under LG+F+I+G4 Model (3)
+6. MUSCLE AA alignment under FLAVI+F+I+G4 Model (3)
+7. MUSCLE AA alignment under Extended Model Finder (3)
+  - IRES 1: LG+I+G4
+  - IRES 2: LG+I+G4
+  - IRES 3: Blosum62+I
+8. MUSCLE NT + HmmCleaner alignment under GTR+F+I+G4 Model (3)
+9. MUSCLE NT + HmmCleaner alignment under Extended Model Finder (3)
+  - IRES 1: GTR+F+I+G4
+  - IRES 2: GTR+F+I+G4
+  - IRES 3: TPM2u+F+I
+10. MUSCLE AA + HmmCleaner alignment under LG+F+I+G4 Model (3)
+11. MUSCLE AA + HmmCleaner alignment under FLAVI+F+I+G4 Model (3)
+12. MUSCLE AA + HmmCleaner alignment under Extended Model Finder (3)
+  - IRES 1: LG+I+G4
+  - IRES 2: LG+I+G4
+  - IRES 3: Blosum62+I
+
+The resulting 51 trees, as well as the distances and log reports can be found in `~/results/Replicase_Trees/` and `~/results/5UTR_Trees/`, respectively.  Note that the single, unrooted tree is under the `ML_Tree` folder.  
+  
+## 5. Rooting the Trees the Trees
+
+The trees constructed using IQ-Tree are unrooted, and so we call on the _phytools_ package in R to root the trees.  Note that two Mitoviruses were given by Helena as the outgroups (Cryphonectria Parasitica Mitovirus and Ophiostoma Mitovirus 4).  However, both of these sequences are associated with IRES 0.  Thus, we resort to midpoint rooting.  
+
+The scripts for the rooting itself can be found in `~/scripts/root_trees.R`
+
+The rooted trees can be found in `~/results/Rooted_Trees/`
+
+
+
+
+
+
+
+
+## Areas of Future Direction
+
+1. Experimental / Precise Verification of IRES types 
+
+2. Change MACSE parameters 
+
+3. Work with IRES types 4 and 5
+
+4. Manual Alignment of datasets (very small sets, feasible for this project, but likely not scaleable) 
+
+5. Different Substitution Models in building of the tree 
+
+
+
+
