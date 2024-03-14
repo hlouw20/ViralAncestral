@@ -1,0 +1,83 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M1, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 14-Mar-2024 10:50:21 as follows:
+
+./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta --tree ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/muscle_hmm_gtr_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model GTR+I+G4
+
+Analysis options:
+  run mode: Ancestral state reconstruction
+  start tree(s): user
+  random seed: 1710431421
+  tip-inner: ON
+  pattern compression: OFF
+  per-rate scalers: OFF
+  site repeats: OFF
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta
+[00:00:00] Loaded alignment with 22 taxa and 1096 sites
+
+WARNING: Fully undetermined columns found: 316
+
+WARNING: Fully undetermined sequences found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 780 sites
+
+Partition 0: noname
+Model: GTR+FO+I+G4m
+Alignment sites: 780
+Gaps: 24.20 %
+Invariant sites: 27.69 %
+
+
+NOTE: Binary MSA file created: ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+
+[00:00:00] Loading user starting tree(s) from: ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/muscle_hmm_gtr_5utr_nt_ires1_rooted.treefile
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 98 / 1568
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:00] Tree #1, initial LogLikelihood: -8612.285112
+
+[00:00:00 -8612.285112] Initial branch length optimization
+[00:00:00 -8609.975911] Model parameter optimization (eps = 10.000000)
+
+[00:00:10] Tree #1, final logLikelihood: -8442.130848
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 1.015477 (ML),  weights&rates: (0.250000,0.140031) (0.250000,0.481355) (0.250000,1.002518) (0.250000,2.376096) 
+   P-inv (ML): 0.123985
+   Base frequencies (ML): 0.230490 0.252000 0.235691 0.281820 
+   Substitution rates (ML): 1.120274 2.388321 1.790664 0.702271 3.351563 1.000000 
+
+Marginal ancestral probabilities saved to: /Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralProbs
+Reconstructed ancestral sequences saved to: /Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralStates
+Node-labeled tree saved to: /Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralTree
+
+Execution log saved to: /Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.log
+
+Analysis started: 14-Mar-2024 10:50:21 / finished: 14-Mar-2024 10:50:32
+
+Elapsed time: 11.114 seconds
+

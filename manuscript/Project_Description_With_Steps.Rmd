@@ -114,7 +114,7 @@ Replicase Gene (NT & AA):
 
 The resulting 51 trees, as well as the distances and log reports can be found in `~/results/Replicase_Trees/` and `~/results/5UTR_Trees/`, respectively.  Note that the single, unrooted tree is under the `ML_Tree` folder.  
   
-## 5. Rooting the Trees the Trees
+## 5. Rooting the Trees
 
 The trees constructed using IQ-Tree are unrooted, and so we call on the _phytools_ package in R to root the trees.  Note that two Mitoviruses were given by Helena as the outgroups (Cryphonectria Parasitica Mitovirus and Ophiostoma Mitovirus 4).  However, both of these sequences are associated with IRES 0.  Thus, we resort to midpoint rooting.  
 
@@ -122,10 +122,11 @@ The scripts for the rooting itself can be found in `~/scripts/root_trees.R`
 
 The rooted trees can be found in `~/results/Rooted_Trees/`
 
+## Ancestral Sequence Reconstruction 
 
+At the moment, we decide to move forward only constructing IRESes 1, 2, and 3 for the 5'UTR region (**look at Slack messages for reason**).  We use RAxML-NG (Alexey M Kozlov, Diego Darriba, Tomáš Flouri, Benoit Morel, Alexandros Stamatakis, RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference, Bioinformatics, Volume 35, Issue 21, November 2019, Pages 4453–4455, https://doi.org/10.1093/bioinformatics/btz305) to construct the ancestral sequences.
 
-
-
+Some of the evolutionary models given by the Extended Model Finder in IQ-Tree are not currently supported by RAxML-NG, so we refrain from constructing these at the moment, but we do construct the ancestral sequences under the GTR+I+G4 model.  The scripts for both the construction and writing the associated FASTA files can be found in `~/scripts/5UTR_ASR.Rmd`.  
 
 
 
@@ -140,6 +141,11 @@ The rooted trees can be found in `~/results/Rooted_Trees/`
 4. Manual Alignment of datasets (very small sets, feasible for this project, but likely not scaleable) 
 
 5. Different Substitution Models in building of the tree 
+
+6. Construct ancestors for Replicase Gene
+
+7. Lab verification of Sequences
+
 
 
 
