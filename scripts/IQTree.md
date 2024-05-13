@@ -122,6 +122,8 @@ Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
 IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires1_NT.fasta -m GTR+F+I+G -b 100`
 
+IRES Type 1 with Mitovirus Outgroup: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta -m GTR+F+I+G -b 100`
+
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires2_NT.fasta -m GTR+F+I+G -b 100`
 
 IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires3_NT.fasta -m GTR+F+I+G -b 100`
@@ -130,6 +132,8 @@ IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Re
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
 IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires1_NT.fasta -m MFP -b 100`
+
+IRES Type 1 with Mitovirus Outgroup: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta -m MFP -b 100`
 
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires2_NT.fasta -m MFP -b 100`
 

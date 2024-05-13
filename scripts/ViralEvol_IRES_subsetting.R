@@ -36,11 +36,11 @@ ires$id <- gsub(".*(NC_\\w+).*", "\\1", ires$V1)
 ## Iterate over IRES types from 0 to 5 to filter by IRES type and write to FASTA file ## 
 
 # 5'UTR Region 
-for (i in 0:5) {
+for (i in 1:1) { ## only working with IRES 1 right now to get df to attach mitovirus
   # Filter data based on IRES type
   filtered_df <- fiveUTR %>%
-    filter(id %in% ires$id[ires$Name4 == paste0("IRES", i)]) %>% # filter by IRES type i 
-    select(seq.name, seq.text) # select name and sequence --> need these column names for dat2fasta
+    filter(id %in% ires$id[ires$Name4 == paste0("IRES", i)]) #%>% # filter by IRES type i 
+    #select(seq.name, seq.text) # select name and sequence --> need these column names for dat2fasta
   
   # Check if filtered_df is empty
   if (nrow(filtered_df) == 0) {
@@ -53,6 +53,24 @@ for (i in 0:5) {
     dat2fasta(filtered_df, outfile = outfile_path) # write to FASTA file 
   }
 }
+
+# Add mitoviruses to IRES 1
+filtered_df[23:24,] <- fiveUTR[130:131, 1:2]
+# Separate name from sequence
+filtered_df[c('id', 'name')] <- str_split_fixed(filtered_df$seq.name, ' ', 2)
+# put underscores so they're uniquely identified in downstream analyses
+filtered_df$name <- gsub(" ", "_", filtered_df$name)
+
+# Clean data so it's IRES 1 virus names with sequences
+IRES1_with_outgroup <- data.frame(cbind(filtered_df$name, filtered_df$seq.text))
+IRES1_with_outgroup[c('name', 'type')] <- str_split_fixed(IRES1_with_outgroup$X1, ',', 2)
+IRES1_with_outgroup <- data.frame(cbind(IRES1_with_outgroup$name, IRES1_with_outgroup$X2))
+colnames(IRES1_with_outgroup) <- c("seq.name", "seq.text")
+new_outfile_path <- sprintf("~/Desktop/ViralAncestral/data/5UTR_Region/IRES_Subtypes/IRES1_with_outgroup.fasta")
+dat2fasta(IRES1_with_outgroup, outfile = new_outfile_path)
+
+# Rearrange columns and remove original name column
+df <- df[c('First Name', 'Last Name', 'State')]
 
 
 # Replicase NT

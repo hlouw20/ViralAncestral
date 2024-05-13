@@ -27,6 +27,9 @@ Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestra
 Output file is a table, with ancestral sequence labeled as NA, so we convert it to a FASTA file and insert "1" into the NA entry to indicate its place in ancestry
 
 ```{r trimmed sym ires1}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("/Users/haileylouw/Desktop/ViralAncestral/results/raxml-ng")
+library(phylotools)
 fiveUTR_muscle_ires1_nt_hmm_sym_ancestral <- read.table("./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/SYM+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralStates")
 colnames(fiveUTR_muscle_ires1_nt_hmm_sym_ancestral) <- c("seq.name", "seq.text")
 fiveUTR_muscle_ires1_nt_hmm_sym_ancestral[20,1] <- 1
@@ -42,12 +45,12 @@ Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestra
 Output file is a table, with ancestral sequence labeled as NA, so we convert it to a FASTA file and insert "1" into the NA entry to indicate its place in ancestry
 
 ```{r trimmed gtr ires1}
-fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral <- read.table("./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralStates")
+fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral <- read.table("~/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT_hmm.fasta.raxml.ancestralStates")
 colnames(fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral) <- c("seq.name", "seq.text")
 fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral[20,1] <- 1
 
 ## Write to directory
-dat2fasta(fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral, "./data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral.fasta")
+dat2fasta(fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral, "~/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/GTR+I+G4/fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral.fasta")
 ```
 
 Untrimmed: 
@@ -58,17 +61,17 @@ Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Ancestral/SYM+G4
 Output file is a table, with ancestral sequence labeled as NA, so we convert it to a FASTA file and insert "1" into the NA entry to indicate its place in ancestry
 
 ```{r sym ires1}
-fiveUTR_muscle_ires1_nt_sym_ancestral <- read.table("./data/5UTR_IRES1_MUSCLE_Ancestral/SYM+G4/5UTR_MUSCLE_ires1_NT.fasta.raxml.ancestralStates")
+fiveUTR_muscle_ires1_nt_sym_ancestral <- read.table("~/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/SYM+G4/5UTR_MUSCLE_ires1_NT.fasta.raxml.ancestralStates")
 colnames(fiveUTR_muscle_ires1_nt_sym_ancestral) <- c("seq.name", "seq.text")
 fiveUTR_muscle_ires1_nt_sym_ancestral[20,1] <- 1
 
 ## Write to directory
-dat2fasta(fiveUTR_muscle_ires1_nt_sym_ancestral, "./data/5UTR_IRES1_MUSCLE_Ancestral/SYM+G4/fiveUTR_muscle_ires1_nt_sym_ancestral.fasta")
+dat2fasta(fiveUTR_muscle_ires1_nt_sym_ancestral, "~/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/SYM+G4/fiveUTR_muscle_ires1_nt_sym_ancestral.fasta")
 ```
 
 2. GTR + I + G4 
 
-Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Ancestral/GTR+I+G4/5UTR_MUSCLE_ires1_NT.fasta --tree ./data/5UTR_IRES1_MUSCLE_Ancestral/GTR+I+G4/muscle_gtr_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model GTR+I+G4`
+Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Ancestral_Mito/ires1.fasta --tree ./data/5UTR_IRES1_MUSCLE_Ancestral/GTR+I+G4/muscle_gtr_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model GTR+I+G4`
 
 Output file is a table, with ancestral sequence labeled as NA, so we convert it to a FASTA file and insert "1" into the NA entry to indicate its place in ancestry
 
@@ -80,6 +83,27 @@ fiveUTR_muscle_ires1_nt_gtr_ancestral[20,1] <- 1
 ## Write to directory
 dat2fasta(fiveUTR_muscle_ires1_nt_gtr_ancestral, "./data/5UTR_IRES1_MUSCLE_Ancestral/GTR+I+G4/fiveUTR_muscle_ires1_nt_gtr_ancestral.fasta")
 ```
+
+Untrimmed, with mitovirus outgroup:
+
+First need to number sequences / differentiate names for RAxML
+
+```{r add nos, echo=FALSE, message=FALSE, warning=FALSE}
+library(phytools)
+fiveUTR_IRES1_GTR_ancestral_state <- read.table("~/Desktop/ViralAncestral/results/5UTR_Trees/GTR+F+I+G4/GTR+I+G4 IRES 1 Ancestral with Mitovirus Outgroup/IRES1_with_outgroup_aligned.fasta.raxml.ancestralStates")
+fiveUTR_IRES1_GTR_ancestral_tree <- read.tree("~/Desktop/ViralAncestral/results/5UTR_Trees/GTR+F+I+G4/GTR+I+G4 IRES 1 Ancestral with Mitovirus Outgroup/IRES1_with_outgroup_aligned.fasta.raxml.ancestralTree")
+plotTree(fiveUTR_IRES1_GTR_ancestral_tree, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:fiveUTR_IRES1_GTR_ancestral_tree$Nnode+Ntip(fiveUTR_IRES1_GTR_ancestral_tree),
+           1:fiveUTR_IRES1_GTR_ancestral_tree$Nnode+Ntip(fiveUTR_IRES1_GTR_ancestral_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+```
+
+1. MFP tree: SYM+G4
+Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Ancestral_Mito/IRES1_with_outgroup_aligned.fasta --tree ./data/5UTR_IRES1_MUSCLE_Ancestral_Mito/SYM+G4/IRES1_with_outgroup_aligned.fasta.treefile --msa-format FASTA --data-type DNA --model SYM+G4`
+
+2. GTR + I + G4 
+Command: `./raxml-ng --ancestral --msa ./data/5UTR_IRES1_MUSCLE_Ancestral_Mito/IRES1_with_outgroup_aligned.fasta --tree ./data/5UTR_IRES1_MUSCLE_Ancestral_Mito/GTR+I+G4/IRES1_with_outgroup_aligned.fasta.treefile --msa-format FASTA --data-type DNA --model GTR+I+G4`
+
 
 ### IRES 2
 

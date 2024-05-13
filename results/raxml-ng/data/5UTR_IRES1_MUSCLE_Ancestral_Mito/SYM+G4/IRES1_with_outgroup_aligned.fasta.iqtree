@@ -1,0 +1,334 @@
+IQ-TREE 2.2.2.6 COVID-edition built May 27 2023
+
+Input file name: /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta
+Type of analysis: ModelFinder + tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 434351
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 24 sequences with 1059 nucleotide sites
+Number of constant sites: 193 (= 18.2247% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 193 (= 18.2247% of all sites)
+Number of parsimony informative sites: 573
+Number of distinct site patterns: 896
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: SYM+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+SYM+G4           -12316.313   24734.626 - 7.83e-06   24739.893 - 1.71e-05   24987.845 +    0.829
+GTR+F+G4         -12308.392   24724.784 -  0.00107   24730.701 -   0.0017   24992.899 +   0.0663
+SYM+R3           -12309.143   24726.286 - 0.000507   24732.202 - 0.000801   24994.400 -   0.0313
+TVM+F+G4         -12312.766   24731.533 - 3.68e-05   24737.228 - 6.49e-05   24994.682 -   0.0272
+SYM+I+G4         -12316.503   24737.006 - 2.38e-06   24742.485 - 4.69e-06   24995.190 -   0.0211
+GTR+F+R3         -12300.048   24714.096 +    0.225   24720.701 +    0.252   24997.105 -  0.00809
+SYM+I+R3         -12307.150   24724.301 -  0.00137   24730.442 -  0.00193   24997.380 -  0.00705
+TVM+F+R3         -12304.604   24721.209 -  0.00642   24727.580 -  0.00808   24999.253 -  0.00276
+GTR+F+I+R3       -12298.080   24712.160 +    0.592   24719.004 +    0.588   25000.135 -  0.00178
+GTR+F+I+G4       -12308.552   24727.104 - 0.000337   24733.245 - 0.000476   25000.183 -  0.00174
+TIM2e+G4         -12329.623   24757.246 - 9.59e-11   24762.102 - 2.58e-10   25000.534 -  0.00146
+TVM+F+I+G4       -12312.973   24733.945 -  1.1e-05   24739.862 - 1.74e-05   25002.060 - 0.000679
+TVM+F+I+R3       -12302.558   24719.116 -   0.0183   24725.721 -   0.0205   25002.126 - 0.000657
+TIM2e+R3         -12320.449   24744.898 -  4.6e-08   24750.377 - 9.06e-08   25003.082 - 0.000407
+TIM2+F+G4        -12320.954   24745.907 - 2.78e-08   24751.386 - 5.47e-08   25004.091 - 0.000246
+TIM2+F+R3        -12311.025   24732.051 - 2.84e-05   24738.192 - 4.01e-05   25005.130 - 0.000146
+TPM2u+F+G4       -12325.645   24753.289 - 6.94e-10   24758.556 - 1.52e-09   25006.508 - 7.34e-05
+TIM2e+I+R3       -12318.968   24743.936 - 7.45e-08   24749.631 - 1.32e-07   25007.085 -  5.5e-05
+TPM2u+F+R3       -12315.973   24739.947 - 5.47e-07   24745.863 - 8.65e-07   25008.061 - 3.38e-05
+TIM2e+I+G4       -12329.977   24759.953 - 2.48e-11   24765.013 - 6.01e-11   25008.207 - 3.14e-05
+TIM2+F+I+R3      -12309.607   24731.213 - 4.31e-05   24737.585 - 5.43e-05   25009.258 - 1.86e-05
+GTR+F+R4         -12299.492   24716.984 +   0.0531   24724.071 -   0.0467   25009.923 - 1.33e-05
+TIM2+F+I+G4      -12321.295   24748.590 - 7.27e-09   24754.285 - 1.28e-08   25011.739 - 5.37e-06
+TPM2u+F+I+R3     -12314.407   24738.814 - 9.65e-07   24744.955 - 1.36e-06   25011.893 - 4.97e-06
+TVMe+G4          -12331.878   24763.756 -  3.7e-12   24768.815 - 8.98e-12   25012.010 - 4.69e-06
+GTR+F+I+R4       -12297.837   24715.674 +    0.102   24723.009 +   0.0794   25013.579 - 2.14e-06
+TPM2u+F+I+G4     -12325.950   24755.899 - 1.88e-10   24761.378 -  3.7e-10   25014.083 - 1.66e-06
+TVMe+R3          -12324.141   24754.283 - 4.22e-10   24759.978 - 7.45e-10   25017.432 - 3.12e-07
+TVMe+I+G4        -12332.098   24766.196 - 1.09e-12   24771.463 - 2.39e-12   25019.415 - 1.16e-07
+TVMe+I+R3        -12322.055   24752.111 - 1.25e-09   24758.027 - 1.98e-09   25020.225 - 7.72e-08
+TPM2+G4          -12345.530   24787.060 - 3.22e-17   24791.718 - 9.55e-17   25025.384 - 5.85e-09
+TPM2+R3          -12336.110   24774.219 - 1.98e-14   24779.486 - 4.33e-14   25027.438 - 2.09e-09
+GTR+F+I+R2       -12319.898   24751.796 - 1.46e-09   24758.167 - 1.84e-09   25029.840 -  6.3e-10
+TPM2+I+R3        -12334.451   24772.903 - 3.82e-14   24778.382 - 7.51e-14   25031.087 - 3.38e-10
+TPM2+I+G4        -12345.875   24789.750 - 8.39e-18   24794.607 - 2.25e-17   25033.039 - 1.27e-10
+GTR+F+R2         -12325.550   24761.101 -  1.4e-11   24767.242 - 1.97e-11   25034.180 -  7.2e-11
+TIM3e+G4         -12349.535   24797.071 - 2.16e-19   24801.927 -  5.8e-19   25040.360 - 3.27e-12
+TIM3e+I+G4       -12350.017   24800.033 - 4.91e-20   24805.093 - 1.19e-19   25048.287 - 6.22e-14
+TIM3e+R3         -12343.078   24790.155 - 6.85e-18   24795.634 - 1.35e-17   25048.339 - 6.06e-14
+TIM3+F+G4        -12343.174   24790.349 - 6.22e-18   24795.828 - 1.22e-17   25048.533 -  5.5e-14
+TPM3u+F+G4       -12347.815   24797.630 - 1.63e-19   24802.897 - 3.57e-19   25050.849 - 1.73e-14
+TIM3e+I+R3       -12341.818   24789.637 - 8.88e-18   24795.332 - 1.57e-17   25052.786 - 6.56e-15
+TIM3+F+R3        -12335.549   24781.098 - 6.35e-16   24787.240 - 8.96e-16   25054.178 - 3.27e-15
+TPM3u+F+R3       -12339.878   24787.756 - 2.27e-17   24793.672 -  3.6e-17   25055.870 -  1.4e-15
+TIM3+F+I+G4      -12343.662   24793.324 -  1.4e-18   24799.020 - 2.48e-18   25056.474 - 1.04e-15
+TNe+G4           -12361.531   24819.061 - 3.62e-24   24823.718 - 1.07e-23   25057.385 - 6.58e-16
+TIMe+G4          -12358.118   24814.236 - 4.04e-23   24819.092 - 1.09e-22   25057.525 - 6.14e-16
+TIM3+F+I+R3      -12334.166   24780.332 - 9.31e-16   24786.704 - 1.17e-15   25058.377 - 4.01e-16
+TPM3u+F+I+G4     -12348.325   24800.651 -  3.6e-20   24806.130 - 7.09e-20   25058.835 - 3.19e-16
+TPM3u+F+I+R3     -12338.461   24786.922 - 3.45e-17   24793.064 - 4.87e-17   25060.002 - 1.78e-16
+TNe+R3           -12353.390   24808.779 - 6.19e-22   24814.047 - 1.35e-21   25061.999 - 6.55e-17
+TIMe+R3          -12350.225   24804.450 - 5.39e-21   24809.929 - 1.06e-20   25062.634 - 4.77e-17
+TN+F+G4          -12354.521   24811.041 -    2e-22   24816.308 - 4.37e-22   25064.260 - 2.11e-17
+TIM+F+G4         -12351.179   24806.359 - 2.08e-21   24811.838 - 4.08e-21   25064.543 - 1.84e-17
+TPM3+G4          -12365.307   24826.613 -  8.3e-26   24831.271 - 2.46e-25   25064.937 - 1.51e-17
+TNe+I+G4         -12362.099   24822.197 - 7.55e-25   24827.053 - 2.03e-24   25065.486 - 1.15e-17
+TIMe+I+G4        -12358.699   24817.397 - 8.32e-24   24822.457 - 2.02e-23   25065.651 - 1.05e-17
+TN+F+R3          -12345.375   24798.750 - 9.32e-20   24804.667 - 1.47e-19   25066.865 - 5.75e-18
+HKY+F+G4         -12359.333   24818.666 - 4.41e-24   24823.725 - 1.07e-23   25066.920 - 5.59e-18
+TNe+I+R3         -12352.530   24809.060 - 5.38e-22   24814.539 - 1.06e-21   25067.244 - 4.76e-18
+K3Pu+F+G4        -12356.064   24814.128 - 4.27e-23   24819.395 - 9.33e-23   25067.347 - 4.52e-18
+TIM+F+R3         -12342.311   24794.622 - 7.34e-19   24800.763 - 1.04e-18   25067.701 - 3.78e-18
+TIMe+I+R3        -12349.351   24804.703 - 4.75e-21   24810.398 - 8.39e-21   25067.852 - 3.51e-18
+HKY+F+R3         -12349.917   24805.833 -  2.7e-21   24811.529 - 4.77e-21   25068.982 - 1.99e-18
+K3Pu+F+R3        -12346.901   24801.802 - 2.03e-20   24807.718 -  3.2e-20   25069.916 - 1.25e-18
+TPM3+R3          -12357.861   24817.721 - 7.08e-24   24822.988 - 1.55e-23   25070.940 - 7.49e-19
+TN+F+I+R3        -12344.416   24798.832 - 8.95e-20   24804.973 - 1.26e-19   25071.911 - 4.61e-19
+TN+F+I+G4        -12355.134   24814.268 - 3.98e-23   24819.747 - 7.83e-23   25072.452 - 3.52e-19
+TIM+F+I+G4       -12351.802   24809.604 -  4.1e-22   24815.299 - 7.24e-22   25072.753 - 3.03e-19
+TIM+F+I+R3       -12341.394   24794.787 - 6.76e-19   24801.159 - 8.51e-19   25072.832 - 2.91e-19
+TPM3+I+G4        -12365.874   24829.748 - 1.73e-26   24834.605 - 4.65e-26   25073.037 - 2.63e-19
+HKY+F+I+R3       -12348.914   24805.829 - 2.71e-21   24811.745 - 4.28e-21   25073.943 - 1.67e-19
+K3Pu+F+I+R3      -12345.839   24801.678 - 2.16e-20   24807.820 - 3.04e-20   25074.758 - 1.11e-19
+TPM3+I+R3        -12356.394   24816.787 - 1.13e-23   24822.266 - 2.22e-23   25074.971 - 9.99e-20
+HKY+F+I+G4       -12359.954   24821.908 - 8.73e-25   24827.175 - 1.91e-24   25075.127 - 9.24e-20
+K3Pu+F+I+G4      -12356.693   24817.387 - 8.37e-24   24822.866 - 1.65e-23   25075.571 -  7.4e-20
+K2P+G4           -12377.567   24849.135 - 1.07e-30   24853.598 - 3.49e-30   25082.494 - 2.32e-21
+K3P+G4           -12374.257   24844.513 - 1.08e-29   24849.171 - 3.19e-29   25082.837 - 1.96e-21
+K2P+R3           -12368.586   24837.172 - 4.23e-28   24842.232 - 1.03e-27   25085.426 - 5.36e-22
+K3P+R3           -12365.425   24832.850 - 3.67e-27   24838.118 - 8.03e-27   25086.070 - 3.89e-22
+K2P+I+R3         -12367.472   24836.945 - 4.74e-28   24842.212 - 1.04e-27   25090.164 - 5.02e-23
+K2P+I+G4         -12378.192   24852.384 -  2.1e-31   24857.041 - 6.24e-31   25090.708 - 3.82e-23
+K3P+I+R3         -12364.438   24832.876 - 3.62e-27   24838.356 - 7.13e-27   25091.061 -  3.2e-23
+K3P+I+G4         -12374.891   24847.781 -  2.1e-30   24852.638 - 5.64e-30   25091.070 - 3.19e-23
+F81+F+R3         -12486.575   25077.150 - 3.28e-80   25082.630 - 6.45e-80   25335.335 -  2.9e-76
+F81+F+G4         -12497.343   25092.687 - 1.39e-83   25097.543 - 3.72e-83   25335.976 -  2.1e-76
+F81+F+I+R3       -12485.047   25076.094 - 5.56e-80   25081.789 - 9.81e-80   25339.243 - 4.11e-77
+F81+F+I+G4       -12497.860   25095.720 - 3.04e-84   25100.780 - 7.38e-84   25343.974 - 3.86e-78
+JC+G4            -12520.603   25133.207 -  2.2e-92   25137.480 - 7.92e-92   25361.601 - 5.74e-82
+JC+R3            -12510.201   25118.402 - 3.61e-89   25123.259 -  9.7e-89   25361.691 - 5.48e-82
+JC+I+R3          -12508.754   25117.507 - 5.65e-89   25122.567 - 1.37e-88   25365.761 - 7.16e-83
+JC+I+G4          -12521.139   25136.277 - 4.75e-93   25140.740 - 1.55e-92   25369.636 - 1.03e-83
+GTR+F+I          -12675.013   25458.025 - 6.45e-163   25463.941 - 1.02e-162   25726.139 - 3.98e-161
+GTR+F            -12808.937   25723.873 - 1.21e-220   25729.569 - 2.13e-220   25987.022 - 8.91e-218
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: SYM+G4
+
+Rate parameter R:
+
+  A-C: 1.2382
+  A-G: 2.3584
+  A-T: 2.2145
+  C-G: 0.7626
+  C-T: 3.7897
+  G-T: 1.0000
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A    -1.023    0.2179    0.4151    0.3898
+  C    0.2179    -1.019    0.1342     0.667
+  G    0.4151    0.1342   -0.7253     0.176
+  T    0.3898     0.667     0.176    -1.233
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.8621
+
+ Category  Relative_rate  Proportion
+  1         0.1087         0.25
+  2         0.431          0.25
+  3         0.9728         0.25
+  4         2.488          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -12316.0738 (s.e. 255.8367)
+Unconstrained log-likelihood (without tree): -7054.4840
+Number of free parameters (#branches + #model parameters): 51
+Akaike information criterion (AIC) score: 24734.1477
+Corrected Akaike information criterion (AICc) score: 24739.4148
+Bayesian information criterion (BIC) score: 24987.3668
+
+Total tree length (sum of branch lengths): 15.0260
+Sum of internal branch lengths: 2.1815 (14.5183% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0009) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Falcovirus_A1_strain_kestrel/VOVE0622/2013/HUN' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++----------------------------------------------Falcovirus_A1_strain_kestrel/VOVE0622/2013/HUN
+|
+|        +------------------------------------------------Bovine_rhinovirus_1_strain_SD-1
+|     +--| (6)
+|     |  |        +--------Human_rhinovirus_14
+|     |  |     +--| (45)
+|     |  |     |  +------Enterovirus_SEV-gx
+|     |  |  +--| (13)
+|     |  |  |  +-----Simian_enterovirus_A
+|     |  +--| (10)
+|     |     |        +--Human_enterovirus_B
+|     |     |     +--| (94)
+|     |     |     |  |  +--Human_enterovirus_strain_V13-0285
+|     |     |     |  +--| (94)
+|     |     |     |     +--Human_enterovirus_A
+|     |     |  +--| (91)
+|     |     |  |  +----Porcine_enterovirus_9_strain_UKG/410/73_polyprotein_gene
+|     |     +--| (36)
+|     |        |  +---Enterovirus_J_strain_1631
+|     |        +--| (52)
+|     |           |  +---Enterovirus_sp._isolate_CPML_8109/08
+|     |           +--| (68)
+|     |              +--Enterovirus_J_strain_N203
+|  +--| (25)
+|  |  |             +----------------------------------------Ophiostoma_mitovirus_4
+|  |  |     +-------| (34)
+|  |  |     |       +-----------------------------Cryphonectria_parasitica_mitovirus_1-NB631
+|  |  |  +--| (15)
+|  |  |  |  +--Poliovirus
+|  |  +--| (18)
+|  |     +--Human_enterovirus_D
++--| (61)
+|  |   +----Human_rhinovirus_C
+|  +---| (94)
+|      +-----Human_rhinovirus_89
+|
+|        +---Bovine_enterovirus
+|     +--| (13)
+|     |  +--Possum_enterovirus_W1
+|  +**| (9)
+|  |  +--Enterovirus_AN12_genomic_RNA
++--| (72)
+   |  +--Enterovirus_goat/JL14
+   +--| (36)
+      |  +--Yak_enterovirus_strain_SWUN-AB001
+      +--| (100)
+         +--Enterovirus_F_strain_BEV-261_polyprotein_gene
+
+Tree in newick format:
+
+(Falcovirus_A1_strain_kestrel/VOVE0622/2013/HUN:2.4855407779,(((Bovine_rhinovirus_1_strain_SD-1:2.5628016264,(((Human_rhinovirus_14:0.4986201464,Enterovirus_SEV-gx:0.3974770115)45:0.1022316644,Simian_enterovirus_A:0.3492034607)13:0.0629184440,(((Human_enterovirus_B:0.0545376590,(Human_enterovirus_strain_V13-0285:0.0749548044,Human_enterovirus_A:0.0758266193)94:0.0544342930)94:0.1305566718,Porcine_enterovirus_9_strain_UKG/410/73_polyprotein_gene:0.2908398287)91:0.1036495298,(Enterovirus_J_strain_1631:0.2421731248,(Enterovirus_sp._isolate_CPML_8109/08:0.2129369399,Enterovirus_J_strain_N203:0.1920422663)68:0.0685214659)52:0.0632151284)36:0.0454280515)10:0.0819178319)6:0.0058297376,(((Ophiostoma_mitovirus_4:2.1454074536,Cryphonectria_parasitica_mitovirus_1-NB631:1.5773728101)34:0.4419390064,Poliovirus:0.0998020070)15:0.0461032538,Human_enterovirus_D:0.0941870662)18:0.1376775962)25:0.1303636803,(Human_rhinovirus_C:0.2720772956,Human_rhinovirus_89:0.3182800136)94:0.2211780769)61:0.2067126665,(((Bovine_enterovirus:0.2567374616,Possum_enterovirus_W1:0.1954811956)13:0.0135636971,Enterovirus_AN12_genomic_RNA:0.0996227625)9:0.0006747438,(Enterovirus_goat/JL14:0.1805583719,(Yak_enterovirus_strain_SWUN-AB001:0.0767964178,Enterovirus_F_strain_BEV-261_polyprotein_gene:0.0912147407)100:0.0516267221)36:0.0198125623)72:0.1931626234);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -12316.945047
+Robinson-Foulds distance between ML tree and consensus tree: 10
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------------------------------------------Falcovirus_A1_strain_kestrel/VOVE0622/2013/HUN
+|
+|        +-------------------------------------------------Bovine_rhinovirus_1_strain_SD-1
+|     +--| (9)
+|     |  |           +----------------------------------------Ophiostoma_mitovirus_4
+|     |  |  +--------| (34)
+|     |  |  |        +------------------------------Cryphonectria_parasitica_mitovirus_1-NB631
+|     |  +--| (18)
+|     |     |  +--Poliovirus
+|     |     +--| (57)
+|     |        +--Human_enterovirus_D
+|  +--| (25)
+|  |  |        +--------Human_rhinovirus_14
+|  |  |     +--| (45)
+|  |  |     |  +------Enterovirus_SEV-gx
+|  |  |  +--| (13)
+|  |  |  |  +-----Simian_enterovirus_A
+|  |  +--| (10)
+|  |     |        +--Human_enterovirus_B
+|  |     |     +--| (94)
+|  |     |     |  |  +--Human_enterovirus_strain_V13-0285
+|  |     |     |  +--| (94)
+|  |     |     |     +--Human_enterovirus_A
+|  |     |  +--| (91)
+|  |     |  |  +----Porcine_enterovirus_9_strain_UKG/410/73_polyprotein_gene
+|  |     +--| (36)
+|  |        |  +---Enterovirus_J_strain_1631
+|  |        +--| (52)
+|  |           |  +---Enterovirus_sp._isolate_CPML_8109/08
+|  |           +--| (68)
+|  |              +--Enterovirus_J_strain_N203
++--| (61)
+|  |   +----Human_rhinovirus_C
+|  +---| (94)
+|      +-----Human_rhinovirus_89
+|
+|     +----Bovine_enterovirus
+|  +--| (16)
+|  |  |     +--Possum_enterovirus_W1
+|  |  |  +--| (36)
+|  |  |  |  +--Enterovirus_goat/JL14
+|  |  +--| (30)
+|  |     +--Enterovirus_AN12_genomic_RNA
++--| (72)
+   |  +--Yak_enterovirus_strain_SWUN-AB001
+   +--| (100)
+      +--Enterovirus_F_strain_BEV-261_polyprotein_gene
+
+
+Consensus tree in newick format: 
+
+(Falcovirus_A1_strain_kestrel/VOVE0622/2013/HUN:2.4779050722,(((Bovine_rhinovirus_1_strain_SD-1:2.5743802837,((Ophiostoma_mitovirus_4:2.1263730315,Cryphonectria_parasitica_mitovirus_1-NB631:1.6227836360)34:0.4734736269,(Poliovirus:0.1458715849,Human_enterovirus_D:0.0943707453)57:0.0000029042)18:0.1388927530)9:0.0000020740,(((Human_rhinovirus_14:0.4988911960,Enterovirus_SEV-gx:0.3968004000)45:0.1027534523,Simian_enterovirus_A:0.3484796598)13:0.0640542510,(((Human_enterovirus_B:0.0546989750,(Human_enterovirus_strain_V13-0285:0.0749529025,Human_enterovirus_A:0.0758037396)94:0.0542285269)94:0.1324601731,Porcine_enterovirus_9_strain_UKG/410/73_polyprotein_gene:0.2890491444)91:0.1036700275,(Enterovirus_J_strain_1631:0.2422853632,(Enterovirus_sp._isolate_CPML_8109/08:0.2132716878,Enterovirus_J_strain_N203:0.1916967805)68:0.0684772171)52:0.0628229903)36:0.0437947986)10:0.0877014512)25:0.1407993993,(Human_rhinovirus_C:0.2708442101,Human_rhinovirus_89:0.3174129345)94:0.2096837747)61:0.1933948030,((Bovine_enterovirus:0.2633688218,((Possum_enterovirus_W1:0.1876720691,Enterovirus_goat/JL14:0.1688166876)36:0.0244701324,Enterovirus_AN12_genomic_RNA:0.1003247495)30:0.0140804285)16:0.0021352584,(Yak_enterovirus_strain_SWUN-AB001:0.0763196384,Enterovirus_F_strain_BEV-261_polyprotein_gene:0.0914084288)100:0.0533033292)72:0.1890944864);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta.treefile -m "SYM{1.23822,2.35843,2.21453,0.762559,3.78967}+FQ+G4{0.862126}" --length 1059
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Apr 15 15:19:20 2024
+Total CPU time used: 24.440793 seconds (0h:0m:24s)
+Total wall-clock time used: 24.50177979 seconds (0h:0m:24s)
+

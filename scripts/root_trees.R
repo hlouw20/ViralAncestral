@@ -18,6 +18,24 @@ write.tree(muscle_gtr_5utr_nt_ires1_rooted, file="./Rooted_Trees/5UTR/muscle_gtr
 write.tree(muscle_gtr_5utr_nt_ires2_rooted, file="./Rooted_Trees/5UTR/muscle_gtr_5utr_nt_ires2_rooted.treefile")
 write.tree(muscle_gtr_5utr_nt_ires3_rooted, file="./Rooted_Trees/5UTR/muscle_gtr_5utr_nt_ires3_rooted.treefile")
 
+## MUSCLE only alignment under GTR+F+I+G4 with mitovirus outgroup for IRES 1
+muscle_gtr_5utr_nt_ires1_mito <- read.tree("~/Desktop/ViralAncestral/results/5UTR_Trees/GTR+F+I+G4/IRES1_aligned_untrimmed_GTR/IRES1_with_outgroup_aligned.fasta.treefile")
+muscle_gtr_5utr_nt_ires1_mito_dat <- read.fasta("~/Desktop/ViralAncestral/data/5UTR_Region/Aligned_Sequences/MUSCLE/IRES1_with_outgroup_aligned.fasta")
+plotTree(muscle_gtr_5utr_nt_ires1_mito, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+
+# root tree and visualize
+muscle_gtr_5utr_nt_ires1_mito_rooted <- root(muscle_gtr_5utr_nt_ires1_mito, node = 32)
+plotTree(muscle_gtr_5utr_nt_ires1_mito_rooted, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+
+# write to output
+write.tree(muscle_gtr_5utr_nt_ires1_mito_rooted, file="~/Desktop/ViralAncestral/results/Rooted_Trees/5UTR/muscle_untrimmed_gtr_5utr_nt_ires1_mito_rooted.treefile")
+
 ## MUSCLE only alignment under Extended Model Finder
 muscle_sym_5utr_nt_ires1 <- read.tree("./5UTR_Trees/MFP/ML_Tree/5UTR_MUSCLE_ires1_MFP_NT.fasta.treefile")
 muscle_tpm3u_5utr_nt_ires2 <- read.tree("./5UTR_Trees/MFP/ML_Tree/5UTR_MUSCLE_ires2_MFP_NT.fasta.treefile")
@@ -30,6 +48,23 @@ muscle_tn_5utr_nt_ires3_rooted <- midpoint.root(muscle_tn_5utr_nt_ires3, node.la
 write.tree(muscle_sym_5utr_nt_ires1_rooted, file="./Rooted_Trees/5UTR/muscle_sym_5utr_nt_ires1_rooted.treefile")
 write.tree(muscle_tpm3u_5utr_nt_ires2_rooted, file="./Rooted_Trees/5UTR/muscle_tpm3u_5utr_nt_ires2_rooted.treefile")
 write.tree(muscle_tn_5utr_nt_ires3_rooted, file="./Rooted_Trees/5UTR/muscle_tn_5utr_nt_ires3_rooted.treefile")
+
+## MUSCLE only alignment under MFP with mitovirus outgroup for IRES 1
+muscle_mfp_5utr_nt_ires1_mito <- read.tree("~/Desktop/ViralAncestral/results/5UTR_Trees/MFP/IRES1_aligned_untrimmed_MFP/IRES1_with_outgroup_aligned.fasta.treefile")
+plotTree(muscle_mfp_5utr_nt_ires1_mito, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+
+# root tree and visualize
+muscle_mfp_5utr_nt_ires1_mito_rooted <- root(muscle_mfp_5utr_nt_ires1_mito, node = 40)
+plotTree(muscle_mfp_5utr_nt_ires1_mito_rooted, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           1:ires1_gtr_tree$Nnode+Ntip(ires1_gtr_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+
+# write to output
+write.tree(muscle_mfp_5utr_nt_ires1_mito_rooted, file="~/Desktop/ViralAncestral/results/Rooted_Trees/5UTR/muscle_mfp_5utr_nt_ires1_mito_rooted.treefile")
 
 ## MUSCLE + HmmCleaner alignment under GTR+F+I+G4 
 muscle_hmm_gtr_5utr_nt_ires1 <- read.tree("./5UTR_Trees/GTR+F+I+G4/ML_Tree/5UTR_MUSCLE_ires1_GTR_NT_hmm.fasta.treefile")
