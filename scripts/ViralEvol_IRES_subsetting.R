@@ -9,7 +9,7 @@ library(tidyr)
 library(stringr)
 
 # Set wd
-setwd("~/Desktop/ViralAncestral/data/Original Data March 2023 (Start Here)")
+setwd("~/Desktop/ViralAncestral/data")
 
 # Read in 5'UTR NT, Replicase NT, Replicase AA, and IRES types
 fiveUTR <- read.fasta("picornaviridae_5UTR_with_outgroup.fasta")

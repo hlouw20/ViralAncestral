@@ -68,6 +68,18 @@ fiveUTR_muscle_ires1_nt_sym_ancestral[20,1] <- 1
 ## Write to directory
 dat2fasta(fiveUTR_muscle_ires1_nt_sym_ancestral, "~/Desktop/ViralAncestral/results/raxml-ng/data/5UTR_IRES1_MUSCLE_Trimmed_Ancestral/SYM+G4/fiveUTR_muscle_ires1_nt_sym_ancestral.fasta")
 ```
+```{r untrimmed sym tree, echo=FALSE, message=FALSE, warning=FALSE}
+library(phytools)
+fiveUTR_IRES1_SYM_ancestral_state <- read.table("~/Desktop/ViralAncestral/results/5UTR_Trees/MFP/SYM+G4 IRES 1 Ancestral with Mitovirus Outgroup/IRES1_with_outgroup_aligned.fasta.raxml.ancestralStates")
+fiveUTR_IRES1_SYM_ancestral_tree <- read.tree("~/Desktop/ViralAncestral/results/5UTR_Trees/MFP/SYM+G4 IRES 1 Ancestral with Mitovirus Outgroup/IRES1_with_outgroup_aligned.fasta.raxml.ancestralTree")
+plotTree(fiveUTR_IRES1_SYM_ancestral_tree, ftype = "i", fize = 0.5, lwd = 1)
+labelnodes(1:fiveUTR_IRES1_SYM_ancestral_tree$Nnode+Ntip(fiveUTR_IRES1_SYM_ancestral_tree),
+           1:fiveUTR_IRES1_SYM_ancestral_tree$Nnode+Ntip(fiveUTR_IRES1_SYM_ancestral_tree),
+           interactive = FALSE, cex=0.3, shape = "ellipse")
+```
+
+
+
 
 2. GTR + I + G4 
 
