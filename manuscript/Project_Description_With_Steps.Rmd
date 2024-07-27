@@ -1,19 +1,11 @@
 ---
 title: "Viral Ancestral Project Steps"
 author: "Hailey Bruzzone"
-date: "Current as of March 12, 2024"
+date: "Current as of July 27th, 2024"
 output: html_document
 ---
 
-# Biggest
-## Bigger
-### Big
-
-Normal
-
-`code`
-
-# Description of Project Steps for Viral-Ancestral Project out of Solis-Lemus Lab in Collaboration with UW Plant Pathology 
+# Description of Project Steps for Viral-Ancestral Project out of Solis-Lemus Lab in Collaboration with UW-Madison Plant Pathology 
 
 ## 1. Original Data 
 
@@ -59,8 +51,7 @@ Note that the alignment algorithms are set to remove sequences that contribute l
 
 ## 3. Trimming the Sequences
 
-After alignment, we trim the sequences to reduce the amount of noise in the alignment.  Initially, we use the software trimAl to trim the sequences aligned with MACSE.  After reading and talking to collaborators about other trimming methods, we decide to use HmmCleaner to trim the sequences aligned with MUSCLE.  Note that while we were able to use the trimAl software with relative ease (on Hailey's personal Macbook with the M1 chip), HmmCleaner was more complicated to use.  At the moment, HmmCleaner is incompatible with the 
-Apple M-chips.  Thus, the trimming procedure had to be conducted on a university Windows laptop while running on a Linux terminal shell.  This should be noted for replication / future studies.
+After alignment, we trim the sequences to reduce the amount of noise in the alignment.  Initially, we use the software trimAl to trim the sequences aligned with MACSE.  After reading and talking to collaborators about other trimming methods, we decide to use HmmCleaner to trim the sequences aligned with MUSCLE.  Note that while we were able to use the trimAl software with relative ease (on Hailey's personal Macbook with the M1 chip), HmmCleaner was more complicated to use.  At the moment, HmmCleaner is incompatible with the Apple M-chips.  Thus, the trimming procedure had to be conducted on a university Windows laptop while running on a Linux terminal shell.  This should be noted for replication / future studies.
 
 The scripts for trimAl can be found in `~/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  The corresponding data can be found in `./data/Trimmed_Sequences/trimAl/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences/trimAl/Replicase_Gene/FASTA_files`. 
 
@@ -124,10 +115,9 @@ The rooted trees can be found in `~/results/Rooted_Trees/`
 
 ## Ancestral Sequence Reconstruction 
 
-At the moment, we decide to move forward only constructing IRESes 1, 2, and 3 for the 5'UTR region (**look at Slack messages for reason**).  We use RAxML-NG (Alexey M Kozlov, Diego Darriba, Tomáš Flouri, Benoit Morel, Alexandros Stamatakis, RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference, Bioinformatics, Volume 35, Issue 21, November 2019, Pages 4453–4455, https://doi.org/10.1093/bioinformatics/btz305) to construct the ancestral sequences.
+At the moment, we decide to move forward only constructing IRESes 1, 2, and 3 for the 5'UTR region.  We use RAxML-NG (Alexey M Kozlov, Diego Darriba, Tomáš Flouri, Benoit Morel, Alexandros Stamatakis, RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference, Bioinformatics, Volume 35, Issue 21, November 2019, Pages 4453–4455, https://doi.org/10.1093/bioinformatics/btz305) to construct the ancestral sequences.
 
 Some of the evolutionary models given by the Extended Model Finder in IQ-Tree are not currently supported by RAxML-NG, so we refrain from constructing these at the moment, but we do construct the ancestral sequences under the GTR+I+G4 model.  The scripts for both the construction and writing the associated FASTA files can be found in `~/scripts/5UTR_ASR.Rmd`.  
-
 
 
 ## Areas of Future Direction
