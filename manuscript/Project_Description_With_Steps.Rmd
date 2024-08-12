@@ -37,15 +37,17 @@ The files for the 5'UTR Region (NT) and Replicase Gene (NT and AA) can be found 
 
 `~/data/5UTR_Region/IRES_Subtypes`
 
-`~/data/Replicase_Gene/IRES_Subtypes`
+`~/unused_files/data/Replicase_Gene_all_files/IRES_Subtypes`
+
+Note that we ultimately model the ancestral sequences for only the 5'UTR region, and so we keep the Replicase Gene files in the `~/unused_files/` directory.  These can be accessed with ease for future work and should be added to the proper working directory if / when they are incorported into the overall project and end goal of modeling the ancestral Replicase Gene.  
 
 ## 3. Aligning the Sequences
 
 Previous work had used the software MAFFT to align the sequences, with default parameters.  Here, we consider two different softwares: MACSE and MUSCLE.  Note that though we had 5 feasible IRES types to work with, after speaking with biologist collaborators we noted that IRES types 1, 2, and 3, were the most well-studied types and were likely the most easy to be verified in downstream analyses.  Because of this, we decide to move forward focusing on IRES types 1, 2, and 3 for alignment, trimming, tree construction, and ASR.  However, each of the steps we take could just as easily be conducted on IRES types 4 and 5 using the appropriate files as mentioned earlier.  
 
-We started with MACSE based on some preliminary readings and suggestions Claudia had based on experience and input from collaborators.  The scripts for aligning with MACSE can be found in the files `~/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  Note that the input file for alignment is the NT file, but MACSE automatically generates both NT and AA alignments for the given sequences.  The files can be found in `~/data/5UTR_Region/Aligned_Sequences/MACSE_Default` and `~/data/Replicase_Gene/Aligned_Sequences/MACSE_Default`, respectively.  Because a main priority in this project is breaking down the data as much as possible to reveal any underlying patterns / processes, we decide to conduct each step on each IRES type respectively.  That is, we align all IRES 1 sequences, IRES 2 sequences, and IRES 3 sequences separately and conduct downstream analyses as is appropriate.   
+We started with MACSE based on some preliminary readings and suggestions Claudia had based on experience and input from collaborators.  The scripts for aligning with MACSE can be found in the files `~/unused_files/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/unused_files/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  Note that the input file for alignment is the NT file, but MACSE automatically generates both NT and AA alignments for the given sequences.  The files can be found in `~/data/5UTR_Region/Aligned_Sequences/MACSE_Default` and `~/unused_files/data/Replicase_Gene_all_files/Aligned_Sequences/MACSE_Default`, respectively.  Because a main priority in this project is breaking down the data as much as possible to reveal any underlying patterns / processes, we decide to conduct each step on each IRES type respectively.  That is, we align all IRES 1 sequences, IRES 2 sequences, and IRES 3 sequences separately and conduct downstream analyses as is appropriate.   
 
-Over the course of the summer we read about an improved alignment strategy, MUSCLE, that had shown more accurate results in downstream analyses.  We then decided to once again align the sequences using MUSCLE this time.  The scripts for aligning with MUSCLE can be found in `~/scripts/MUSCLE_5UTR.md` and `~/scripts/MUSCLE_Replicase_Gene.md`, respectively.  The aligned sequences can be found in  `~/data/5UTR_Region/Aligned_Sequences/MUSCLE` and `~/data/Replicase_Gene/Aligned_Sequences/MUSCLE`, respectively.  
+Over the course of the summer we read about an improved alignment strategy, MUSCLE, that had shown more accurate results in downstream analyses.  We then decided to once again align the sequences using MUSCLE this time.  The scripts for aligning with MUSCLE can be found in `~/scripts/MUSCLE_5UTR.md` and `~/unused_files/scripts/MUSCLE_Replicase_Gene.md`, respectively.  The aligned sequences can be found in  `~/data/5UTR_Region/Aligned_Sequences` and `~/unused_files/data/Replicase_Gene/Aligned_Sequences/MUSCLE`, respectively.  Additionally, we note that the decision to align with MUCSLE was reached prior to aligning the 5'UTR region with MACSE, and this was never completed.  However, by following the corresponding scripts that were used in aligning the Replicase Gene with MACSE, this can be completed in future work or for completeness by using the appropriate IRES subtype files.  
 
 Note that the alignment algorithms are set to remove sequences that contribute little to no information to the MSA (i.e., the vast majority of positions in the alignment are gaps).  This renders out datasets to be very small, and it's unclear whether these small alignments are able to give us proper signal in downstream evolutionary analyses. 
 
@@ -53,9 +55,9 @@ Note that the alignment algorithms are set to remove sequences that contribute l
 
 After alignment, we trim the sequences to reduce the amount of noise in the alignment.  Initially, we use the software trimAl to trim the sequences aligned with MACSE.  After reading and talking to collaborators about other trimming methods, we decide to use HmmCleaner to trim the sequences aligned with MUSCLE.  Note that while we were able to use the trimAl software with relative ease (on Hailey's personal Macbook with the M1 chip), HmmCleaner was more complicated to use.  At the moment, HmmCleaner is incompatible with the Apple M-chips.  Thus, the trimming procedure had to be conducted on a university Windows laptop while running on a Linux terminal shell.  This should be noted for replication / future studies.
 
-The scripts for trimAl can be found in `~/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  The corresponding data can be found in `./data/Trimmed_Sequences/trimAl/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences/trimAl/Replicase_Gene/FASTA_files`. 
+The scripts for trimAl can be found in `~/unused_files/scripts/MACSE_Defualt_Replicase_Gene_trimAL.md` and `~/unused_files/scripts/MACSE_Defualt_5UTR_Region_trimAL.md`.  The corresponding data can be found in `./unused_files/data/Trimmed_Sequences_no_outgroup/trimAl/5UTR_Region/FASTA_files` and `./unused_files/data/Trimmed_Sequences/trimAl/Replicase_Gene/FASTA_files`. 
 
-While HmmCleaner was run on a different machine than the rest of the project, the scripts for what can be run on the appropriate machine can be found in `~/scripts/HmmCleaner.md`. The corresponding data can be found in `./data/Trimmed_Sequences/HmmCleaner/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences/HmmCleaner/Replicase_Gene/FASTA_files`.  
+While HmmCleaner was run on a different machine than the rest of the project, the scripts for what can be run on the appropriate machine can be found in `~/unused_files/scripts/HmmCleaner.md`. The corresponding data can be found in `./data/Trimmed_Sequences_no_outgroup/HmmCleaner/5UTR_Region/FASTA_files` and `./data/Trimmed_Sequences_no_outgroup/HmmCleaner/Replicase_Gene/FASTA_files`.  
 
 ## 4. Building the Trees
 
@@ -103,7 +105,7 @@ Replicase Gene (NT & AA):
   - IRES 2: LG+I+G4
   - IRES 3: Blosum62+I
 
-The resulting 51 trees, as well as the distances and log reports can be found in `~/results/Replicase_Trees/` and `~/results/5UTR_Trees/`, respectively.  Note that the single, unrooted tree is under the `ML_Tree` folder.  
+The resulting 51 trees, as well as the distances and log reports can be found in `~/results/Replicase_Trees/` and `~/results/5UTR_Trees/`, respectively.  Additionally, because there was an initial rendition of all trees with no outgroup, you can also find some 5'UTR trees with midpoint rooting in the directory `~/unused_files/results/5UTR_unused_rooted_trees/`
   
 ## 5. Rooting the Trees
 
@@ -118,6 +120,8 @@ The rooted trees can be found in `~/results/Rooted_Trees/`
 At the moment, we decide to move forward only constructing IRESes 1, 2, and 3 for the 5'UTR region.  We use RAxML-NG (Alexey M Kozlov, Diego Darriba, Tomáš Flouri, Benoit Morel, Alexandros Stamatakis, RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference, Bioinformatics, Volume 35, Issue 21, November 2019, Pages 4453–4455, https://doi.org/10.1093/bioinformatics/btz305) to construct the ancestral sequences.
 
 Some of the evolutionary models given by the Extended Model Finder in IQ-Tree are not currently supported by RAxML-NG, so we refrain from constructing these at the moment, but we do construct the ancestral sequences under the GTR+I+G4 model.  The scripts for both the construction and writing the associated FASTA files can be found in `~/scripts/5UTR_ASR.Rmd`.  
+
+The final ancestral sequences of the 5'UTR region for IRES 1, untrimmed, rooted with a Mitovirus outgroup can be found in `~/results/raxml-ng/5UTR_IRES1_MUSCLE_Ancestral_Mito/`.  
 
 
 ## Areas of Future Direction
