@@ -12,9 +12,7 @@ write.tree(muscle_gtr_5utr_nt_ires1_rooted, file="./muscle_gtr_5utr_nt_ires1_roo
 
 ## MUSCLE only alignment under SYM+G4
 setwd("~/Desktop/ViralAncestral/unused_files/results/5UTR_Trees/MFP/SYM+G4 IRES 1 Ancestral with Mitovirus Outgroup")
-muscle_sym_5utr_nt_ires1 <- read.tree("./IRES1_with_outgroup_aligned.fasta.raxml.startTree")
-muscle_sym_5utr_nt_ires1_rooted <- root(muscle_sym_5utr_nt_ires1, outgroup = "Ophiostoma_mitovirus_4", node.lables = "support")
-write.tree(muscle_sym_5utr_nt_ires1_rooted, file="./muscle_sym_5utr_nt_ires1_rooted.treefile")
+muscle_gtr_5utr_nt_ires1 <- read.tree("./IRES1_with_outgroup_aligned.fasta.raxml.startTree")
 
 
 
