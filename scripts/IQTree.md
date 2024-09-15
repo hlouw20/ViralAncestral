@@ -21,7 +21,9 @@ IRES Type 3:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replic
 ## MUSCLE Replicase Gene Nucleotides under GTR+F+I+G 
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
-IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta -m GTR+F+I+G -b 100`
+Working Directory (Fall 2024): `/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/iqtree/bin`
+
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_NT.fasta -m GTR+F+I+G -b 100`
 
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m GTR+F+I+G -b 100`
 
@@ -30,7 +32,9 @@ IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replica
 ## MUSCLE Replicase Gene Nucleotides under Extended Model Finder 
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
-IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_NT.fasta -m MFP -b 100`
+Working Directory (Fall 2024): `/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/iqtree/bin`
+
+IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_NT.fasta -m MFP -b 100`
 
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m MFP -b 100`
 
@@ -39,7 +43,9 @@ IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replica
 ## MUSCLE Replicase Gene Amino Acids under LG+I+G+F
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
-IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_AA.fasta -m LG+I+G+F -b 100`
+Working Directory (Fall 2024): `/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/iqtree/bin`
+
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_AA.fasta -m LG+I+G+F-b 100`
 
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta -m LG+I+G+F -b 100`
 
@@ -57,7 +63,7 @@ IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replica
 ## MUSCLE Replicase Gene Amino Acids under Extended Model Finder
 Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/data/iqtree/bin`
 
-IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires1_AA.fasta -m MFP -b 100`
+IRES Type 1: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_AA.fasta -m MFP -b 100`
 
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_AA.fasta -m MFP -b 100`
 

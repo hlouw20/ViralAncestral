@@ -1,0 +1,74 @@
+IQ-TREE multicore version 2.2.2.6 COVID-edition for Mac OS X 64-bit built May 27 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    Haileys-MBP-2.lan (SSE4.2, 8 GB RAM)
+Command: ./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_AA.fasta -m LG+I+G+F-b 100
+Seed:    541736 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Sep 15 15:14:20 2024
+Kernel:  SSE2 - 1 threads (8 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 8 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene//Rep_MUSCLE_ires1_AA.fasta ... Fasta format detected
+Reading fasta file: done in 0.000752926 secs using 92.97% CPU
+NOTE: Change sequence name 'rf 1 NC_001617, Human rhinovirus 89, complete genome, RNA-directed RNA polymerase, (5730, 7110)' -> rf_1_NC_001617,
+NOTE: Change sequence name 'rf 1 NC_009996, Human rhinovirus C, complete genome, 3D, (5667, 7047)' -> rf_1_NC_009996,
+NOTE: Change sequence name 'rf 1 NC_001490, Human rhinovirus 14, complete genome, 3D, (5785, 7165)' -> rf_1_NC_001490,
+NOTE: Change sequence name 'rf 1 NC_029905, Enterovirus SEV-gx, complete genome, 3D, (5856, 7287)' -> rf_1_NC_029905,
+NOTE: Change sequence name 'rf 1 NC_001612, Human enterovirus A, complete genome, 3D, (5943, 7329)' -> rf_1_NC_001612,
+NOTE: Change sequence name 'rf 1 NC_030454, Human enterovirus strain V13-0285, partial genome, 3D-pol, (5922, 7308)' -> rf_1_NC_030454,
+NOTE: Change sequence name 'rf 1 NC_003988, Simian enterovirus A, complete genome, 3D, (5867, 7244)' -> rf_1_NC_003988,
+NOTE: Change sequence name 'rf 1 NC_001430, Human enterovirus D, complete genome, 3D-POL, (5937, 7308)' -> rf_1_NC_001430,
+NOTE: Change sequence name 'rf 1 NC_002058, Poliovirus, complete genome, RNA-directed RNA polymerase, (5986, 7369)' -> rf_1_NC_002058,
+NOTE: Change sequence name 'rf 1 NC_001472, Human enterovirus B, complete genome, 3D, (5901, 7287)' -> rf_1_NC_001472,
+NOTE: Change sequence name 'rf 1 NC_013695, Enterovirus J strain N203, complete genome, 3D, (5885, 7271)' -> rf_1_NC_013695,
+NOTE: Change sequence name 'rf 1 NC_010415, Enterovirus J strain 1631, complete genome, 3D, (5856, 7242)' -> rf_1_NC_010415,
+NOTE: Change sequence name 'rf 1 NC_034267, Enterovirus goat/JL14, complete genome, 3D, (5903, 7337)' -> rf_1_NC_034267,
+NOTE: Change sequence name 'rf 1 NC_001859, Bovine enterovirus, complete genome, 3D, (5960, 7343)' -> rf_1_NC_001859,
+NOTE: Change sequence name 'rf 1 NC_008714, Possum enterovirus W1, complete genome, RNA-directed RNA polymerase, (5933, 7316)' -> rf_1_NC_008714,
+NOTE: Change sequence name 'rf 1 NC_021220, Enterovirus F strain BEV-261 polyprotein gene, complete cds, RNA-directed RNA-polymerase, (5940, 7323)' -> rf_1_NC_021220,
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.0010829 secs using 77.57% CPU
+Alignment has 16 sequences with 496 columns, 350 distinct patterns
+242 parsimony-informative, 67 singleton sites, 187 constant sites
+WARNING: Some sequence names are changed as follows:
+rf_1_NC_001617, -> rf_1_NC_001617_
+rf_1_NC_009996, -> rf_1_NC_009996_
+rf_1_NC_001490, -> rf_1_NC_001490_
+rf_1_NC_029905, -> rf_1_NC_029905_
+rf_1_NC_001612, -> rf_1_NC_001612_
+rf_1_NC_030454, -> rf_1_NC_030454_
+rf_1_NC_003988, -> rf_1_NC_003988_
+rf_1_NC_001430, -> rf_1_NC_001430_
+rf_1_NC_002058, -> rf_1_NC_002058_
+rf_1_NC_001472, -> rf_1_NC_001472_
+rf_1_NC_013695, -> rf_1_NC_013695_
+rf_1_NC_010415, -> rf_1_NC_010415_
+rf_1_NC_034267, -> rf_1_NC_034267_
+rf_1_NC_001859, -> rf_1_NC_001859_
+rf_1_NC_008714, -> rf_1_NC_008714_
+rf_1_NC_021220, -> rf_1_NC_021220_
+
+                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 4.3869e-05 secs using 41.03% CPU
+   1  rf_1_NC_001617_    7.26%    passed     97.84%
+   2  rf_1_NC_009996_    7.26%    passed     49.48%
+   3  rf_1_NC_001490_    7.26%    passed     97.21%
+   4  rf_1_NC_029905_    3.83%    passed     84.01%
+   5  rf_1_NC_001612_    6.85%    passed     99.76%
+   6  rf_1_NC_030454_    6.85%    passed     99.95%
+   7  rf_1_NC_003988_    7.46%    passed     99.49%
+   8  rf_1_NC_001430_    8.06%    passed     99.86%
+   9  rf_1_NC_002058_    7.06%    passed     99.97%
+  10  rf_1_NC_001472_    6.85%    passed    100.00%
+  11  rf_1_NC_013695_    6.85%    passed     99.88%
+  12  rf_1_NC_010415_    6.85%    passed    100.00%
+  13  rf_1_NC_034267_    3.63%    passed     99.96%
+  14  rf_1_NC_001859_    7.06%    passed     99.92%
+  15  rf_1_NC_008714_    7.06%    passed     99.98%
+  16  rf_1_NC_021220_    7.06%    passed     99.85%
+****  TOTAL              6.70%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Checking for duplicate sequences: done in 9.20296e-05 secs using 48.9% CPU
+Reading input tree file 100 ...ERROR: File not found or incorrect input, pls check it again.100

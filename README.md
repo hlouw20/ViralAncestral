@@ -36,7 +36,79 @@ Infer a phylogenetic tree from viral sequences, and use the tree to estimate the
 
 - If sequences and tree have biological logic, send ancestral sequence(s) to be sequenced and tested for viability 
 
+## Revision Fall 2024 
 
+Goal: reconstruct Triticum Mosaic Virus 
+
+Method: reconstruct both replicase gene and 5'UTR (region)
+
+  - 4 Final Ancestral Sequences:
+  
+    1. 5'UTR Nucleotides using GTR + I + G4 model of evolution
+      a. Results in: 
+       
+    2. 5'UTR Nucleotides using SYM + G4 model of evolution 
+      a. Results in: 
+      
+    3. Replicse Gene AA using model finder in IQ-Tree 
+      a. Results in: 
+      
+    4. Replicase Gene NT using model finder in IQ-Tree
+    
+Analysis Steps: 
+
+  - Aquire original sequences for both 5'UTR and Replicase in Google Drive from Helena and Aurelie 
+  
+  - Split the 2 respective areas of the genome among the 5 IRES types 
+    a. By splitting up the files for these regions by IRES type, we were not left with much data (sequences) in each subset by IRES type.  
+      i. IRES types 1 - 3 were the most well-studied / understood at the time of this analysis, so we decided to focus on mainly these 3 IRES types
+      ii. IRES type 1 had 22 sequences in its subset, while IRES types 2 and 3 had fewer than 10 sequences in their subsets.
+      iii. Because we were not confident in the downstream analyses which would be conducted using very few sequences, we decided to focus on only IRES type 1.  
+      
+  - Attach mitovirus sequences (2 sequences) as outgroup to the IRES subset
+    
+  - Align using MUSCLE bioinformatics software 
+    a. We would like to trim these sequences using HmmCleaner, but do to computational restrictions in the dependencies required for this 
+    
+  - Build Tree using IQ-Tree
+    a. For NT, we find that GTR+I+G4 is widely used in the literature and considered the most biologically reasonable model of evolution across many organism types 
+      i. A limitation to this is that viral evolution is one of the least well-understood evolutionary patterns in biology, so it is unclear whether this model's feasibility is applicable to viruses as well. 
+      
+    b. For NT, we also allow IQ-Tree's ModelFinderPlus software choose the best-fitting model for the data, from a computational perspective.  
+      i. For the 5-UTR MSA, this was SYM+G4 
+      
+    c. For the Replicase Gene NT, we constructed 2 trees using GTR+I+F+G4 and ModelFinder, but ModelFinder found that GTR+I+F+G4 was the best-fitting model as well.  
+    
+    c. All trees were constructed using 100 bootstrap replicates (not ultrafast)
+      
+  - Root tree on Mitovirus outgroup     
+      
+  - Reconstruct Ancestral Sequence for Triticum using RAxML-NG
+    a. We perform four (4) reconstructions, supplying each respective MSA and corresponding tree (built under a specific evolutionary pattern) to the software and running the program.
+      i. Note that, for some evolutionary models used in IQ-Tree, there are not yet suppoerted by RAxML-NG.  Though RAxML-NG is more widely-used for ASR and has shown to have the most feasibly downstream analyses, IQ-Tree can also perform ASR, and if a viable option if the model of evolution cannot be used in RAxML-NG.  
+      
+  - Validate trees + sequences with biologists
+  
+  - Send sequences to be synthesized in a laboratory 
+    a. If the sequence is viable (doesn't die off immediately), we consider this a "success"
+    
+    
+## To-do
+
+- Root Replicase NT tree on mitovirus outgroup
+- Put names on AA sequences
+- Split replicase AA sequences on IRES type 
+- Align AA sequences in MUSCLE 
+- Build tree for replicase AA sequences
+- Root Replicase AA tree on mitovirus outgroup 
+- ASR for Replicase NT tree
+- ASR for Replicase AA tree(s)
+- Send sequences and trees to Helena for verification   
+  
+  
+  
+  
+  
 
 
 
