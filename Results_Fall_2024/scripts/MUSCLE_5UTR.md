@@ -1,6 +1,6 @@
 ## Code for aligning 5'UTR Region Nucleotides through MUSCLE 
 
-Directory: `cd ./Desktop/ViralAncestral/data`
+Directory: `cd ./Desktop/ViralAncestral/Results_Fall_2024/data`
 
 IRES type 1: `./muscle -in ./5UTR_Region/IRES_Subtypes/5UTR_ires1_NT.fasta -out ./5UTR_Region/Aligned_Sequences/MUSCLE/5UTR_MUSCLE_ires1_NT.fasta`
 

@@ -9,7 +9,7 @@ library(tidyr)
 library(stringr)
 
 # Set wd
-setwd("~/Desktop/ViralAncestral/data")
+setwd("~/Desktop/ViralAncestral/Results_Fall_2024")
 
 # Read in 5'UTR NT, Replicase NT, Replicase AA, and IRES types
 fiveUTR <- read.fasta("picornaviridae_5UTR_with_outgroup.fasta")
@@ -31,7 +31,38 @@ ires$Name4[100] <- "IRES2"
 fiveUTR$id <- gsub(".*(NC_\\w+).*", "\\1", fiveUTR$seq.name)
 RepNT$id <- gsub(".*(NC_\\w+).*", "\\1", RepNT$seq.name)
 RepAA$id <- gsub(".*(NC_\\w+).*", "\\1", RepAA$seq.name)
+RepAA[85,3] <- "NC_004046"
+RepAA[86,3] <- "NC_004052"
 ires$id <- gsub(".*(NC_\\w+).*", "\\1", ires$V1)
+
+# Focus on IRES 1 
+# 5'UTR sequences
+ires1_5UTR <- fiveUTR %>% filter(id %in% ires[ires$Name4=="IRES1",]$id) %>% select(-'id') # get only IRES 1
+ires1_5UTR_with_outgroup <- rbind(ires1_5UTR,fiveUTR[130:131,-3]) # attach mitovirus outgroup 
+ires1_5UTR_with_outgroup$seq.name <- sub("^[^ ]+ ", "", ires1_5UTR_with_outgroup$seq.name) # remove sequence code
+ires1_5UTR_with_outgroup$seq.name <- gsub("complete genome", "", ires1_5UTR_with_outgroup$seq.name) # remove 'complete genome'
+ires1_5UTR_with_outgroup$seq.name<- gsub(" ", "_", ires1_5UTR_with_outgroup$seq.name) # add underscores to retain in fasta file
+dat2fasta(ires1_5UTR_with_outgroup,"~/Desktop/ViralAncestral/Results_Fall_2024/ires1_5UTR_with_outgroup.fasta")
+
+# Replicase NT
+ires1_Rep_NT <- RepNT %>% filter(id %in% ires[ires$Name4=="IRES1",]$id) %>% select(-'id')
+ires1_Rep_NT_with_outgroup <- rbind(ires1_Rep_NT,RepNT[85:86,-3])
+ires1_Rep_NT_with_outgroup$seq.name <- sub("^[^ ]+ ", "", ires1_Rep_NT_with_outgroup$seq.name) # remove sequence code
+ires1_Rep_NT_with_outgroup$seq.name <- gsub("complete genome", "", ires1_Rep_NT_with_outgroup$seq.name) # remove 'complete genome'
+ires1_Rep_NT_with_outgroup$seq.name<- gsub(" ", "_", ires1_Rep_NT_with_outgroup$seq.name) # add underscores to retain in fasta file
+dat2fasta(ires1_Rep_NT_with_outgroup ,"~/Desktop/ViralAncestral/Results_Fall_2024/ires1_REP_NT_with_outgroup.fasta")
+
+# Replicase AA 
+ires1_Rep_AA <- RepAA %>% filter(id %in% ires[ires$Name4=="IRES1",]$id) %>% select(-'id')
+ires1_Rep_AA_with_outgroup <- rbind(ires1_Rep_AA,RepAA[85:86,-3])
+ires1_Rep_AA_with_outgroup$seq.name <- sub("^[^ ]+ [^ ]+ [^ ]+ ", "", ires1_Rep_AA_with_outgroup$seq.name) # remove sequence code
+ires1_Rep_AA_with_outgroup[17,]$seq.name <- ires1_Rep_NT_with_outgroup[17,]$seq.name
+ires1_Rep_AA_with_outgroup[18,]$seq.name <- ires1_Rep_NT_with_outgroup[18,]$seq.name
+ires1_Rep_AA_with_outgroup$seq.name <- gsub("complete genome", "", ires1_Rep_AA_with_outgroup$seq.name) # remove 'complete genome'
+ires1_Rep_AA_with_outgroup$seq.name<- gsub(" ", "_", ires1_Rep_AA_with_outgroup$seq.name)
+dat2fasta(ires1_Rep_AA_with_outgroup ,"~/Desktop/ViralAncestral/Results_Fall_2024/ires1_REP_AA_with_outgroup.fasta")
+
+
 
 ## Iterate over IRES types from 0 to 5 to filter by IRES type and write to FASTA file ## 
 

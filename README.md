@@ -95,12 +95,10 @@ Analysis Steps:
     
 ## To-do
 
-- Root Replicase NT tree on mitovirus outgroup
-- Put names on AA sequences
-- Split replicase AA sequences on IRES type 
-- Align AA sequences in MUSCLE 
-- Build tree for replicase AA sequences
-- Root Replicase AA tree on mitovirus outgroup 
+- Build Replicase NT tree with newly named + aligned sequences
+- Root Replicase NT tree
+- Build Replicase AA tree with newly named + aligned sequences
+- Root Replicase AA tree
 - ASR for Replicase NT tree
 - ASR for Replicase AA tree(s)
 - Send sequences and trees to Helena for verification   
