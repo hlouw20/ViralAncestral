@@ -32,6 +32,8 @@ Working Directory: `/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/R
 
 IRES Type 1:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_NT_with_outgroup_aligned.fasta -m MFP -b 100`
 
+IRES Type 1 with SYM+G4:  `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_NT_with_outgroup_aligned.fasta -m SYM+G4 -b 100`
+
 IRES Type 2: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires2_NT.fasta -m MFP -b 100`
 
 IRES Type 3: `./iqtree2 -s /Users/haileylouw/Desktop/ViralAncestral/data/Replicase_Gene/Aligned_Sequences/MUSCLE/Rep_MUSCLE_ires3_NT.fasta -m MFP`

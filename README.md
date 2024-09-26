@@ -94,11 +94,6 @@ Analysis Steps:
     
     
 ## To-do
-
-- Build Replicase NT tree with newly named + aligned sequences
-- Root Replicase NT tree
-- Build Replicase AA tree with newly named + aligned sequences
-- Root Replicase AA tree
 - ASR for Replicase NT tree
 - ASR for Replicase AA tree(s)
 - Send sequences and trees to Helena for verification   

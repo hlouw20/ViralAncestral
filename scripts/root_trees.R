@@ -22,6 +22,12 @@ muscle_gtr_rep_nt_ires1 <- read.tree("./ires1_REP_NT_with_outgroup_aligned.fasta
 muscle_gtr_rep_nt_ires1_rooted <- root(muscle_gtr_rep_nt_ires1, outgroup = "Ophiostoma_mitovirus_4__", node.lables = "support")
 write.tree(muscle_gtr_rep_nt_ires1_rooted, file="./muscle_gtr_rep_nt_ires1_rooted.treefile")
 
+## Replicase Tree for SYM+G4
+setwd("~/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/SYM+G4 (NT)")
+muscle_sym_rep_nt_ires1 <- read.tree("./ires1_REP_NT_with_outgroup_aligned.fasta.treefile")
+muscle_sym_rep_nt_ires1_rooted <- root(muscle_sym_rep_nt_ires1, outgroup = "Ophiostoma_mitovirus_4__", node.lables = "support")
+write.tree(muscle_sym_rep_nt_ires1_rooted, file="./muscle_sym_rep_nt_ires1_rooted.treefile")
+
 ## Replicase Tree for LG+I+F+G4
 setwd("~/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/LG+F+I+G4 (AA)")
 muscle_lg_rep_aa_ires1 <- read.tree("./ires1_REP_AA_with_outgroup_aligned.fasta.treefile")
@@ -33,6 +39,13 @@ setwd("~/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/Q.yeast+R3 (AA)
 muscle_q_rep_aa_ires1 <- read.tree("./ires1_REP_AA_with_outgroup_aligned.fasta.treefile")
 muscle_q_rep_aa_ires1_rooted <- root(muscle_q_rep_aa_ires1, outgroup = "Ophiostoma_mitovirus_4__", node.lables = "support")
 write.tree(muscle_q_rep_aa_ires1_rooted, file="./muscle_q_rep_aa_ires1_rooted.treefile")
+
+
+
+##############################
+########## OLD CODE ##########
+##############################
+
 
 muscle_gtr_5utr_nt_ires2 <- read.tree("./5UTR_Trees/GTR+F+I+G4/ML_Tree/5UTR_MUSCLE_ires2_GTR_NT.fasta.treefile")
 muscle_gtr_5utr_nt_ires3 <- read.tree("./5UTR_Trees/GTR+F+I+G4/ML_Tree/5UTR_MUSCLE_ires3_GTR_NT.fasta.treefile")

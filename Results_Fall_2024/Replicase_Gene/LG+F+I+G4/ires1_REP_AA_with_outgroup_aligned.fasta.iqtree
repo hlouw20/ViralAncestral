@@ -1,0 +1,197 @@
+IQ-TREE 2.2.2.6 COVID-edition built May 27 2023
+
+Input file name: /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_AA_with_outgroup_aligned.fasta
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 262339
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 18 sequences with 926 amino-acid sites
+Number of constant sites: 280 (= 30.2376% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 280 (= 30.2376% of all sites)
+Number of parsimony informative sites: 293
+Number of distinct site patterns: 656
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+F+I+G4
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0534
+  pi(R) = 0.0426
+  pi(N) = 0.0455
+  pi(D) = 0.0635
+  pi(C) = 0.0162
+  pi(Q) = 0.0204
+  pi(E) = 0.0582
+  pi(G) = 0.0581
+  pi(H) = 0.0262
+  pi(I) = 0.0663
+  pi(L) = 0.1013
+  pi(K) = 0.0779
+  pi(M) = 0.0286
+  pi(F) = 0.0485
+  pi(P) = 0.0483
+  pi(S) = 0.0669
+  pi(T) = 0.0569
+  pi(W) = 0.0149
+  pi(Y) = 0.0489
+  pi(V) = 0.0576
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.0005
+Gamma shape alpha: 0.7690
+
+ Category  Relative_rate  Proportion
+  0         0              0.0005
+  1         0.0890         0.2499
+  2         0.3945         0.2499
+  3         0.9484         0.2499
+  4         2.5700         0.2499
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -12053.9046 (s.e. 375.3010)
+Unconstrained log-likelihood (without tree): -5776.9140
+Number of free parameters (#branches + #model parameters): 54
+Akaike information criterion (AIC) score: 24215.8093
+Corrected Akaike information criterion (AICc) score: 24222.6290
+Bayesian information criterion (BIC) score: 24476.6765
+
+Total tree length (sum of branch lengths): 17.9990
+Sum of internal branch lengths: 7.8901 (43.8364% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Human_rhinovirus_89____RNA-directed_RNA_polymerase___5730__7110__' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++--Human_rhinovirus_89____RNA-directed_RNA_polymerase___5730__7110__
+|
++--Human_rhinovirus_C____3D___5667__7047__
+|
+|  +--Human_rhinovirus_14____3D___5785__7165__
++--| (42)
+   |  +--Enterovirus_SEV-gx____3D___5856__7287__
+   +--| (68)
+      |           +--Human_enterovirus_A____3D___5943__7329__
+      |        +--| (100)
+      |        |  +--Human_enterovirus_strain_V13-0285__partial_genome__3D-pol___5922__7308__
+      |     +--| (20)
+      |     |  |     +--Simian_enterovirus_A____3D___5867__7244__
+      |     |  |  +--| (23)
+      |     |  |  |  |  +--Human_enterovirus_B____3D___5901__7287__
+      |     |  |  |  +--| (44)
+      |     |  |  |     |  +--Enterovirus_J_strain_N203____3D___5885__7271__
+      |     |  |  |     +--| (64)
+      |     |  |  |        +--Enterovirus_J_strain_1631____3D___5856__7242__
+      |     |  +--| (16)
+      |     |     |  +--Human_enterovirus_D____3D-POL___5937__7308__
+      |     |     +--| (60)
+      |     |        +--Poliovirus____RNA-directed_RNA_polymerase___5986__7369__
+      |  +--| (28)
+      |  |  |  +--Enterovirus_goat/JL14____3D___5903__7337__
+      |  |  +--| (81)
+      |  |     |  +--Bovine_enterovirus____3D___5960__7343__
+      |  |     +--| (88)
+      |  |        |  +--Possum_enterovirus_W1____RNA-directed_RNA_polymerase___5933__7316__
+      |  |        +--| (94)
+      |  |           +--Enterovirus_F_strain_BEV-261_polyprotein_gene__complete_cds__RNA-directed_RNA-polymerase___5940__7323__
+      +--| (60)
+         |                                   +---------------Cryphonectria_parasitica_mitovirus_1-NB631__
+         +-----------------------------------| (100)
+                                             +--------------------Ophiostoma_mitovirus_4__
+
+Tree in newick format:
+
+(Human_rhinovirus_89____RNA-directed_RNA_polymerase___5730__7110__:0.5191805335,Human_rhinovirus_C____3D___5667__7047__:0.4542879592,(Human_rhinovirus_14____3D___5785__7165__:0.3526666987,(Enterovirus_SEV-gx____3D___5856__7287__:0.4027269597,((((Human_enterovirus_A____3D___5943__7329__:0.0106914613,Human_enterovirus_strain_V13-0285__partial_genome__3D-pol___5922__7308__:0.0158137658)100:0.4512331834,((Simian_enterovirus_A____3D___5867__7244__:0.4443995387,(Human_enterovirus_B____3D___5901__7287__:0.1519492259,(Enterovirus_J_strain_N203____3D___5885__7271__:0.0621772798,Enterovirus_J_strain_1631____3D___5856__7242__:0.0778886743)64:0.0484042178)44:0.0404041625)23:0.0398670088,(Human_enterovirus_D____3D-POL___5937__7308__:0.2382647258,Poliovirus____RNA-directed_RNA_polymerase___5986__7369__:0.1539445734)60:0.0582978766)16:0.0331045436)20:0.0293996208,(Enterovirus_goat/JL14____3D___5903__7337__:0.1739001329,(Bovine_enterovirus____3D___5960__7343__:0.1382540335,(Possum_enterovirus_W1____RNA-directed_RNA_polymerase___5933__7316__:0.0462575133,Enterovirus_F_strain_BEV-261_polyprotein_gene__complete_cds__RNA-directed_RNA-polymerase___5940__7323__:0.0108394958)94:0.0858576821)88:0.1521655725)81:0.1107022014)28:0.0578397155,(Cryphonectria_parasitica_mitovirus_1-NB631__:2.9528600255,Ophiostoma_mitovirus_4__:3.9027649612)100:6.4971935290)60:0.0562026872)68:0.1109043338)42:0.1185355224);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -12057.775035
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Human_rhinovirus_89____RNA-directed_RNA_polymerase___5730__7110__
+|
++--Human_rhinovirus_C____3D___5667__7047__
+|
+|  +--Human_rhinovirus_14____3D___5785__7165__
++--| (42)
+   |  +--Enterovirus_SEV-gx____3D___5856__7287__
+   +--| (68)
+      |              +--Human_enterovirus_A____3D___5943__7329__
+      |           +--| (100)
+      |           |  +--Human_enterovirus_strain_V13-0285__partial_genome__3D-pol___5922__7308__
+      |        +--| (16)
+      |        |  |  +--Enterovirus_goat/JL14____3D___5903__7337__
+      |        |  +--| (81)
+      |        |     |  +--Bovine_enterovirus____3D___5960__7343__
+      |        |     +--| (88)
+      |        |        |  +--Possum_enterovirus_W1____RNA-directed_RNA_polymerase___5933__7316__
+      |        |        +--| (94)
+      |        |           +--Enterovirus_F_strain_BEV-261_polyprotein_gene__complete_cds__RNA-directed_RNA-polymerase___5940__7323__
+      |     +--| (26)
+      |     |  |     +--Human_enterovirus_D____3D-POL___5937__7308__
+      |     |  |  +--| (60)
+      |     |  |  |  +--Poliovirus____RNA-directed_RNA_polymerase___5986__7369__
+      |     |  +--| (18)
+      |     |     |  +--Human_enterovirus_B____3D___5901__7287__
+      |     |     +--| (44)
+      |     |        |  +--Enterovirus_J_strain_N203____3D___5885__7271__
+      |     |        +--| (64)
+      |     |           +--Enterovirus_J_strain_1631____3D___5856__7242__
+      |  +--| (28)
+      |  |  +--Simian_enterovirus_A____3D___5867__7244__
+      +--| (60)
+         |                                   +----------------Cryphonectria_parasitica_mitovirus_1-NB631__
+         +-----------------------------------| (100)
+                                             +---------------------Ophiostoma_mitovirus_4__
+
+
+Consensus tree in newick format: 
+
+(Human_rhinovirus_89____RNA-directed_RNA_polymerase___5730__7110__:0.5076359618,Human_rhinovirus_C____3D___5667__7047__:0.4608783673,(Human_rhinovirus_14____3D___5785__7165__:0.3519594780,(Enterovirus_SEV-gx____3D___5856__7287__:0.3912246387,(((((Human_enterovirus_A____3D___5943__7329__:0.0098832535,Human_enterovirus_strain_V13-0285__partial_genome__3D-pol___5922__7308__:0.0165476376)100:0.4393713544,(Enterovirus_goat/JL14____3D___5903__7337__:0.1743154130,(Bovine_enterovirus____3D___5960__7343__:0.1361092874,(Possum_enterovirus_W1____RNA-directed_RNA_polymerase___5933__7316__:0.0462766691,Enterovirus_F_strain_BEV-261_polyprotein_gene__complete_cds__RNA-directed_RNA-polymerase___5940__7323__:0.0106958112)94:0.0865496140)88:0.1474444777)81:0.1170890119)16:0.0339371560,((Human_enterovirus_D____3D-POL___5937__7308__:0.2397037078,Poliovirus____RNA-directed_RNA_polymerase___5986__7369__:0.1509171068)60:0.0594898356,(Human_enterovirus_B____3D___5901__7287__:0.1522074414,(Enterovirus_J_strain_N203____3D___5885__7271__:0.0648757835,Enterovirus_J_strain_1631____3D___5856__7242__:0.0741871824)64:0.0474607456)44:0.0645388788)18:0.0274085419)26:0.0513795021,Simian_enterovirus_A____3D___5867__7244__:0.4041431454)28:0.0283778188,(Cryphonectria_parasitica_mitovirus_1-NB631__:2.9538790885,Ophiostoma_mitovirus_4__:3.8529385491)100:6.2484899872)60:0.0704088318)68:0.1157133364)42:0.1129657735);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_AA_with_outgroup_aligned.fasta.treefile -m "LG+F+I{0.000501546}+G4{0.768962}" --length 926
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_AA_with_outgroup_aligned.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/ires1_REP_AA_with_outgroup_aligned.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Tue Sep 17 17:14:34 2024
+Total CPU time used: 80.976824 seconds (0h:1m:20s)
+Total wall-clock time used: 83.61834812 seconds (0h:1m:23s)
+

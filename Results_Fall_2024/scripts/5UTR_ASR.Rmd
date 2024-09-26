@@ -1,7 +1,7 @@
 ---
 title: "Construction of 5'UTR Ancestral Sequences"
 author: "Hailey Bruzzone"
-date: "Septmber, 2024"
+date: "Septmber 2024"
 output: html_document
 ---
 
@@ -56,7 +56,32 @@ dat2fasta(fiveUTR_muscle_ires1_nt_hmm_gtr_ancestral, "~/Desktop/ViralAncestral/r
 Untrimmed: 
 1. MFP tree: SYM+G4
 
+Directory: `cd /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/5-UTR`
+
 Command: `./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/IRES1_with_outgroup_aligned.fasta --tree ./SYM+G4/muscle_sym_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model SYM+G4`
+
+Untrimmed Replicase: 
+
+Directory: `cd /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene`
+
+1. GTR (NT)
+
+Command: `./GTR+I+G4/raxml-ng/raxml-ng --ancestral --msa ./GTR+I+G4/ires1_REP_NT_with_outgroup_aligned.fasta --tree ./GTR+I+G4/muscle_gtr_rep_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model GTR+I+G4`
+
+2. SYM (NT)
+
+Command: `./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/ires1_REP_NT_with_outgroup_aligned.fasta --tree ./SYM+G4/muscle_sym_rep_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model SYM+G4`
+
+3. LG (AA)
+
+Command: `./LG+F+I+G4/raxml-ng/raxml-ng --ancestral --msa ./LG+F+I+G4/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./LG+F+I+G4/muscle_lg_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model LG+F+I+G4`
+
+4. Q.yest (AA)
+
+Command: `./Q.yeast+R3/raxml-ng/raxml-ng --ancestral --msa ./Q.yeast+R3/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./Q.yeast+R3/muscle_q_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model Q.yeast+R3`
+
+
+
 
 Output file is a table, with ancestral sequence labeled as NA, so we convert it to a FASTA file and insert "1" into the NA entry to indicate its place in ancestry
 

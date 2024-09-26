@@ -7,14 +7,14 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Apple M1, 8 cores, 8 GB RAM
 
-RAxML-NG was called at 13-Sep-2024 16:35:59 as follows:
+RAxML-NG was called at 25-Sep-2024 23:03:46 as follows:
 
-./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/IRES1_with_outgroup_aligned.fasta --tree ./SYM+G4/muscle_sym_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model SYM+G4
+./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/IRES1_with_outgroup_aligned.fasta --tree ./SYM+G4/muscle_sym_5utr_nt_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model SYM+G4 --redo
 
 Analysis options:
   run mode: Ancestral state reconstruction
   start tree(s): user
-  random seed: 1726263359
+  random seed: 1727323426
   tip-inner: ON
   pattern compression: OFF
   per-rate scalers: OFF
@@ -23,6 +23,8 @@ Analysis options:
   branch lengths: proportional (ML estimate, algorithm: NR-FAST)
   SIMD kernels: SSE3
   parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 [00:00:00] Reading alignment from file: ./SYM+G4/IRES1_with_outgroup_aligned.fasta
 [00:00:00] Loaded alignment with 24 taxa and 1059 sites
@@ -69,7 +71,7 @@ Node-labeled tree saved to: /Users/haileylouw/Desktop/ViralAncestral/Results_Fal
 
 Execution log saved to: /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/5-UTR/SYM+G4/IRES1_with_outgroup_aligned.fasta.raxml.log
 
-Analysis started: 13-Sep-2024 16:35:59 / finished: 13-Sep-2024 16:35:59
+Analysis started: 25-Sep-2024 23:03:46 / finished: 25-Sep-2024 23:03:46
 
-Elapsed time: 0.367 seconds
+Elapsed time: 0.632 seconds
 
