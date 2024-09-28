@@ -62,6 +62,21 @@ Command: `./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/IRES1_with_outgr
 
 Untrimmed Replicase: 
 
+Read-in data to remove commas (incompatible with RAxML): 
+
+```{r fix data}
+ires1_rep_nt <- read.fasta("/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/GTR+I+G4/ires1_REP_NT_with_outgroup_aligned.fasta")
+ires1_rep_aa <- read.fasta("/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/LG+F+I+G4/ires1_REP_AA_with_outgroup_aligned.fasta")
+
+# remove all commas, paretheses, and spaces
+ires1_rep_nt$seq.name <-  gsub("[,() ]", "", ires1_rep_nt$seq.name)
+ires1_rep_aa$seq.name <-  gsub("[,() ]", "", ires1_rep_aa$seq.name)
+
+dat2fasta(ires1_rep_nt, "/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/GTR+I+G4/ires1_REP_NT_with_outgroup_aligned.fasta")
+
+dat2fasta(ires1_rep_aa, "/Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene/LG+F+I+G4/ires1_REP_AA_with_outgroup_aligned.fasta")
+```
+
 Directory: `cd /Users/haileylouw/Desktop/ViralAncestral/Results_Fall_2024/Replicase_Gene`
 
 1. GTR (NT)
@@ -74,11 +89,11 @@ Command: `./SYM+G4/raxml-ng/raxml-ng --ancestral --msa ./SYM+G4/ires1_REP_NT_wit
 
 3. LG (AA)
 
-Command: `./LG+F+I+G4/raxml-ng/raxml-ng --ancestral --msa ./LG+F+I+G4/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./LG+F+I+G4/muscle_lg_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model LG+F+I+G4`
+Command: `./LG+F+I+G4/raxml-ng/raxml-ng --ancestral --msa ./LG+F+I+G4/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./LG+F+I+G4/muscle_lg_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type AA --model LG+F+I+G4`
 
 4. Q.yest (AA)
 
-Command: `./Q.yeast+R3/raxml-ng/raxml-ng --ancestral --msa ./Q.yeast+R3/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./Q.yeast+R3/muscle_q_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type DNA --model Q.yeast+R3`
+Command: `./Q.yeast+R3/raxml-ng/raxml-ng --ancestral --msa ./Q.yeast+R3/ires1_REP_AA_with_outgroup_aligned.fasta --tree ./Q.yeast+R3/muscle_q_rep_aa_ires1_rooted.treefile --msa-format FASTA --data-type AA --model Q.yeast+R3`
 
 
 
